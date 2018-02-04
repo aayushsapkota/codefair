@@ -1,0 +1,18 @@
+{
+  "name": "itcodefair",
+  "version": "1.0.0",
+  "description": "website for codefair 2018",
+  "main": "main.js",
+  "scripts": {
+    "test": "console.log(\"test\");"
+  },
+  "repository": {
+    "type": "git",
+    "url": "init"
+  },
+  "author": "Aayush",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^3.10.0"
+  }
+}
