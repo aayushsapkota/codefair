@@ -4,8 +4,11 @@
   "description": "website for codefair 2018",
   "main": "main.js",
   "scripts": {
-    "build": "rimraf dist && NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development node webpack-dev-server.js"
+    "start": "rimraf dist && NODE_ENV=production webpack --watch",
+    "dev": "NODE_ENV=development node webpack-dev-server.js",
+    "build-css": "node-sass --include-path scss src/scss/_main.scss dist/main.bundle.css",
+    "watch-css": "nodemon -e scss -x 'npm run build-css'",
+    "build": "rimraf dist && NODE_ENV=production webpack -w"
   },
   "repository": {
     "type": "git",
@@ -22,7 +25,15 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.17.1",
+    "postcss-loader": "^2.1.1",
     "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^3.10.0",
     "win-node-env": "^0.1.0"
   }
