@@ -56,21 +56,22 @@ var plugins = PRODUCTION  ?    [
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use:[
-            {
-              loader: 'css-loader',
-              options: {
-                url: false,
-                minimize: false,
-                sourceMap: true
-              }
-            },
-            {
-              loader: 'sass-loader', options: {
-                watch: true
-              }
-            }]
-          })
-        }
-      ]
-    }
-  };
+              {
+                loader: 'css-loader',
+                options: {
+                  url: false,
+                  minimize: true,
+                  sourceMap: true
+                }
+              },
+              {
+                loader: 'sass-loader', options: {
+                  watch: true,
+                  sourceMap: true
+                }
+              }]
+            })
+          }
+        ]
+      }
+    };
