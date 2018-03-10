@@ -6,5 +6,8 @@
   <link rel="stylesheet" href="/dist/main.bundle.css" />
 </head>
 <body>
+  <?php
+
+   ?>
 </body>
 </html>
