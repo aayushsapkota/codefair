@@ -4,11 +4,11 @@
   "description": "website for codefair 2018",
   "main": "main.js",
   "scripts": {
-    "start": "rimraf dist && NODE_ENV=production webpack --watch",
+    "start": "rimraf build && NODE_ENV=production webpack --watch",
     "dev": "NODE_ENV=development node webpack-dev-server.js",
-    "build-css": "node-sass --include-path scss src/scss/_main.scss dist/main.bundle.css",
+    "build-css": "node-sass --include-path scss src/scss/_main.scss build/main.bundle.css",
     "watch-css": "nodemon -e scss -x 'npm run build-css'",
-    "build": "rimraf dist && NODE_ENV=production webpack -w"
+    "build": "rimraf build && NODE_ENV=production webpack -w"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   "author": "Aayush",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "webpack-dev-server": "^2.11.1"
   },
   "devDependencies": {

@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/scss/src/scss/components/_index.scss"],"names":[],"mappings":"AAAA,OAEI,UAAW","file":"main.bundle.css","sourcesContent":["body {\r\n  p {\r\n    color: blue;\r\n  }\r\n}\r\na{\r\n  \r\n}\r\n\n\n\n// WEBPACK FOOTER //\n// ./src/scss/src/scss/components/_index.scss"],"sourceRoot":""}

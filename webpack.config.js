@@ -37,8 +37,8 @@ var plugins = PRODUCTION  ?    [
     entry: entry,
     plugins: plugins,
     output: {
-      path: path.join(__dirname, 'dist/'),
-      publicPath: '/dist/',
+      path: path.join(__dirname, 'public/build/'),
+      publicPath: '/public/build/',
       filename: 'main.bundle.js'
     },
     module: {
@@ -46,13 +46,13 @@ var plugins = PRODUCTION  ?    [
         {
           test: /\.js$/,
           loaders: ['babel-loader'],
-          exclude: '/node_modules/'
+          exclude: '/node_modules/',
         }
       ],
       rules: [
         {
           test: /\.scss$/,
-          exclude: path.resolve(__dirname, "node_modules"),
+          exclude: path.resolve(__dirname, "node_modules\/(?!bootstrap/scss/bootstrap-reboot.scss"),
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use:[
