@@ -1,0 +1,32 @@
+
+$black: #333333;
+
+$theme-colors: (
+  "primary":    #111111,
+  "secondary":  #222222,
+  "success":    green,
+  "info":       skyblue,
+  "warning":    yellow,
+  "danger":     #f2f2f2,
+  "light":      white,
+  "dark":       $black
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
