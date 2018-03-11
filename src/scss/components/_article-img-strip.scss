@@ -1,0 +1,123 @@
+.article-img-strip__wrap {
+  background-color: $grey;
+  &:nth-child(4n+1){
+    background-color: $pink;
+  }
+  &:nth-child(4n+2){
+    background-color: theme-color(secondary);
+  }
+  &:nth-child(4n+3){
+    background-color: theme-color(tertiary);
+  }
+}
+
+.article-img-strip{
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  padding-top: 48px;
+  padding-bottom: 24px;
+  h2 {
+    font-size: 32px;
+    font-family: $hff;
+    line-height: 48px;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    margin: 0;
+    // MEDIUM MQ
+    @include media-breakpoint-up("md") {
+      font-size: 38px;
+    }
+  }
+  h3{
+    font-size: 26px;
+    font-family: $hff;
+    line-height: 48px;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    margin: 0;
+    // MEDIUM MQ
+    @include media-breakpoint-up("md") {
+      font-size: 34px;
+    }
+  }
+  ul {
+    padding: 0;
+    margin-bottom: 16px;
+    list-style-type: none;
+  }
+  li{
+    font-size: 20px;
+    font-family: $hff;
+    line-height: 24px;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    &:before{
+      content: ">";
+      padding-right: 12px;
+    }
+  }
+}
+
+.article-img-strip__img{
+  display: block;
+  width: 100%;
+  height: auto;
+  @include object-fit(cover, center);
+  margin-bottom: 32px;
+}
+
+// MEDIUM MQ
+@include media-breakpoint-up("sm") {
+  .article-img-strip__wrap{
+    position: relative;
+    overflow: hidden;
+
+    &:nth-child(2n+1){
+      .article-img-strip__img {
+        right: 0;
+        left: 50%;
+      }
+      .article-img-strip__img + .article-img-strip__text{
+        margin-right: span(6 wider of 12);
+        margin-left: 0;
+      }
+    }
+  }
+
+  .article-img-strip{
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .article-img-strip__img + .article-img-strip__text{
+    margin-left: span(6 wider of 12);
+    margin-right: 0;
+  }
+  .article-img-strip__text{
+    flex-grow: 1;
+  }
+
+  .article-img-strip__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+}
+// MEDIUM MQ
+@include media-breakpoint-up("md") {
+  .article-img-strip__wrap{
+    &:nth-child(2n+1){
+      .article-img-strip__img + .article-img-strip__text{
+        margin-right: span(7 of 12);
+      }
+    }
+  }
+
+  .article-img-strip__img + .article-img-strip__text{
+    margin-left: span(7 of 12);
+    margin-right: 0;
+  }
+}

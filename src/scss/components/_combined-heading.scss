@@ -1,0 +1,32 @@
+.combined-heading {
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 16px;
+  > * {
+    display: block;
+  }
+}
+
+.combined__heading-title{
+  font-size: 38px;
+  font-family: $hff;
+  line-height: 56px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  // SMALL MQ
+  @include media-breakpoint-up("sm") {
+    font-size: 46px;
+  }
+  @include media-breakpoint-up("md") {
+    font-size: 56px;
+  }
+
+}
+
+.combined-heading__tagline{
+  font-size: 20px;
+  font-family: $hff;
+  line-height: 24px;
+  font-weight: 500;
+}

@@ -1,0 +1,27 @@
+.btn {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: $red;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  min-width: 100px;
+  width: auto;
+  width: fit-content;
+  margin-top: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: $dff;
+  letter-spacing: 0.7px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: theme-color(primary);
+  }
+}

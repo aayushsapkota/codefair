@@ -1,9 +1,17 @@
-
 $black: #333333;
+$blue: #211545;
+$teal: #056571;
+$blue--lighter: #295879;
+$fresh: #CCDFCB; //blue on top for accessiblity
+$red: #a5283B;
+$gold: #D9B310; //blue on top for accessiblity
+$grey: #2e3738;
+$pink: #723146;
 
 $theme-colors: (
-  "primary":    #111111,
-  "secondary":  #222222,
+  "primary":    $blue,
+  "secondary":  $red,
+  "tertiary": $blue--lighter,
   "success":    green,
   "info":       skyblue,
   "warning":    yellow,
@@ -11,6 +19,14 @@ $theme-colors: (
   "light":      white,
   "dark":       $black
 );
+
+
+//font-families
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700|Roboto:400,400i,500,500i,700,700i');
+$heading-font-family: 'oxygen';
+$default-font-family: 'roboto';
+$hff: $heading-font-family;
+$dff: $default-font-family;
 
 $grid-breakpoints: (
   xs: 0,
@@ -20,8 +36,8 @@ $grid-breakpoints: (
   xl: 1200px
 ) !default;
 
+;
 // Grid containers
-//
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
