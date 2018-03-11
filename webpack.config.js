@@ -46,13 +46,11 @@ var plugins = PRODUCTION  ?    [
         {
           test: /\.js$/,
           loaders: ['babel-loader'],
-          exclude: '/node_modules/',
         }
       ],
       rules: [
         {
           test: /\.scss$/,
-          exclude: path.resolve(__dirname, "node_modules\/(?!bootstrap/scss/bootstrap-reboot.scss"),
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use:[
@@ -62,6 +60,14 @@ var plugins = PRODUCTION  ?    [
                   url: false,
                   minimize: true,
                   sourceMap: true
+                }
+              },{
+                loader: 'postcss-loader',
+                options: {
+                  sourceMap: true,
+                  processors: [
+                    require('autoprefixer')
+                  ]
                 }
               },
               {
