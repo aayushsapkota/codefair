@@ -1,5 +1,29 @@
+#normal excludes
 /node_modules/*
-/public/**/*
+/public/cache/*
+/public/components/*
+/public/assets/*
+/public/connectors/*
+/public/config/*
+/public/manager/*
+/public/setup/*
+/public/config.core.php
+/public/index.php
+
+#core excludes
+/public/core/cache/*
+/public/core/components/*
+/public/core/config/*
+/public/core/docs/*
+/public/core/error/*
+/public/core/export/*
+/public/core/import/*
+/public/core/lexicon
+/public/core/model
+/public/core/packages
+/public/core/xpdo
+
+# includes
 !/public/core/elements/*
 !/public/.htaccess
 !/public/build/*
