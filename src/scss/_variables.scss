@@ -1,3 +1,7 @@
+//enable grid or disable it
+$visual-grid :  false;
+
+//project colors
 $black: #333333;
 $blue: #211545;
 $teal: #056571;
@@ -8,6 +12,7 @@ $gold: #D9B310; //blue on top for accessiblity
 $grey: #2e3738;
 $pink: #723146;
 
+//map for most-commonly used colors
 $theme-colors: (
   "primary":    $blue,
   "secondary":  $red,
@@ -22,8 +27,8 @@ $theme-colors: (
 
 
 //font-families
-@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700|Roboto:400,400i,500,500i,700,700i');
-$heading-font-family: 'oxygen';
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,700|Roboto:400,400i,500,500i,700,700i');
+$heading-font-family: 'Poppins';
 $default-font-family: 'roboto';
 $hff: $heading-font-family;
 $dff: $default-font-family;

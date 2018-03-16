@@ -88,3 +88,7 @@
     background-color: theme-color(primary);
   }
 }
+a.header__nav-link.active{
+  background-color: theme-color(primary);
+  color: white;
+}

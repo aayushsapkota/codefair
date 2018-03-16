@@ -17,6 +17,7 @@
   "author": "Aayush",
   "license": "ISC",
   "dependencies": {
+    "base-base": "git+https://github.com/DashMedia/base-base.git",
     "object-fit-images": "^3.2.3",
     "webpack-dev-server": "^2.11.1"
   },

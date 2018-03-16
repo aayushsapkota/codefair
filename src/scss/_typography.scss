@@ -1,0 +1,104 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+h1 {
+  @include base-base(38px, $hff, 2,  $lines: 3);
+}
+
+h2 {
+  @include base-base(34px, $hff, 2, $lines: 2.5);
+}
+
+h3 {
+  @include base-base(28px, $hff, 2);
+}
+
+h4 {
+  @include base-base(24px, $hff, 2);
+}
+
+h5 {
+  @include base-base(20px, $hff, 0.5, $lines: 1.5);
+}
+
+
+// SMALL MQ
+@include media-breakpoint-up('sm') {
+  h1 {
+    @include base-base(46px, $hff, 2, $lines: 3.5);
+  }
+
+  h2 {
+    @include base-base(36px, $hff, 2, $lines: 3);
+  }
+
+  h3 {
+    @include base-base(32px, $hff, 2, $lines: 2.5);
+  }
+
+  h4 {
+    @include base-base(26px, $hff, 1.5, $lines: 2);
+  }
+}
+
+// MEDIUM MQ
+@include media-breakpoint-up('md') {
+  h1 {
+    @include base-base(56px, $hff, 2, $lines: 3.5);
+  }
+
+  h2 {
+    @include base-base(40px, $hff, 2, $lines: 3);
+  }
+
+  h3 {
+    @include base-base(34px, $hff, 2, $lines: 2.5);
+  }
+
+  h4 {
+    @include base-base(28px, $hff, 1.5, $lines: 2);
+  }
+}
+
+.rte{
+  p {
+    @include base-base(16px, $dff, 2, $lines: 1.5);
+  }
+
+  a {
+    color: theme-color(secondary);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px solid theme-color white;
+    transition: border-bottom-color 0.25s ease-in-out;
+    &:hover, &:focus, &:active{
+      text-decoration: none;
+      color: theme-color(secondary);
+      border-bottom: 2px solid theme-color(secondary);
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 0;
+    @include margin-trailer(1.5);
+    list-style-type: none;
+    li {
+      @include base-base(18px, $hff, 1, $lines: 1.5);
+      &::before {
+        content: ">";
+        padding-right: 12px;
+      }
+      ul,
+      ol {
+            padding-top: 8px;
+        padding-left: 24px;
+      }
+    }
+  }
+}

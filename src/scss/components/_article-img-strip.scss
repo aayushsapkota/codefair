@@ -41,22 +41,7 @@
       font-size: 34px;
     }
   }
-  ul {
-    padding: 0;
-    margin-bottom: 16px;
-    list-style-type: none;
-  }
-  li{
-    font-size: 20px;
-    font-family: $hff;
-    line-height: 24px;
-    padding-top: 4px;
-    padding-bottom: 12px;
-    &:before{
-      content: ">";
-      padding-right: 12px;
-    }
-  }
+  
 }
 
 .article-img-strip__img{
