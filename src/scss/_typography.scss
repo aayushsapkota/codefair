@@ -8,14 +8,17 @@ h5 {
 
 h1 {
   @include base-base(38px, $hff, 2,  $lines: 3);
+  letter-spacing: -0.6px;
 }
 
 h2 {
   @include base-base(34px, $hff, 2, $lines: 2.5);
+  letter-spacing: -0.4px;
 }
 
 h3 {
   @include base-base(28px, $hff, 2);
+  letter-spacing: -0.3px;
 }
 
 h4 {
@@ -42,7 +45,7 @@ h5 {
   }
 
   h4 {
-    @include base-base(26px, $hff, 1.5, $lines: 2);
+    @include base-base(24px, $hff, 1.5, $lines: 2);
   }
 }
 
@@ -61,7 +64,7 @@ h5 {
   }
 
   h4 {
-    @include base-base(28px, $hff, 1.5, $lines: 2);
+    @include base-base(26px, $hff, 1.5, $lines: 2);
   }
 }
 
@@ -89,15 +92,17 @@ h5 {
     @include margin-trailer(1.5);
     list-style-type: none;
     li {
-      @include base-base(18px, $hff, 1, $lines: 1.5);
+      @include base-base(16px, $hff, 0.5, $lines: 1.5);
       &::before {
         content: ">";
         padding-right: 12px;
       }
       ul,
       ol {
-            padding-top: 8px;
+        padding-top: 0;
         padding-left: 24px;
+        @include margin-trailer(0.5);
+
       }
     }
   }

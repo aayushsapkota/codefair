@@ -3,8 +3,6 @@ var webpack = require('webpack');
 var ExtractTextPlugin =  require('extract-text-webpack-plugin');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-
-
 var DEVELOPMENT = process.env.NODE_ENV === 'development';
 var PRODUCTION = process.env.NODE_ENV === 'production';
 

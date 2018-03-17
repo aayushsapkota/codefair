@@ -16,7 +16,7 @@ $pink: #723146;
 $theme-colors: (
   "primary":    $blue,
   "secondary":  $red,
-  "tertiary": $blue--lighter,
+  "tertiary":   $blue--lighter,
   "success":    green,
   "info":       skyblue,
   "warning":    yellow,
@@ -41,13 +41,20 @@ $grid-breakpoints: (
   xl: 1200px
 ) !default;
 
-;
+
 // Grid containers
 // Define the maximum width of `.container` for different screen sizes.
-
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px
 ) !default;
+
+//grid defaults 
+$_susy-defaults: (
+  'columns': susy-repeat(4),
+  'gutters': 0.5,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
