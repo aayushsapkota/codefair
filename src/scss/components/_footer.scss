@@ -1,0 +1,43 @@
+.footer {
+  box-shadow: 0px 0px 5px rgba(0,0,0,.7);
+  background-color: theme-color(primary);
+  color: white;
+  a {
+    color: inherit;
+    border-bottom-color: theme-color(primary);
+    &:hover,
+    &:active,
+    &:focus{
+      color: white;
+      opacity: 0.8;
+      border-bottom-color: white;
+    }
+  }
+}
+
+.footer__inner-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include padding-leader(0.5);
+  @include padding-trailer(0.5);
+  > * {
+    width: auto;
+  }
+}
+.footer__icon-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__icon-link {
+  @include base-base(16px, $dff, 1, $lines: 1.5);
+  text-decoration: none;
+  width: auto;
+  display: block;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+  margin-right: 12px;
+}
