@@ -5,19 +5,15 @@
   margin-left: span($context, $config);
 }
 
-.col-sm-2 {
+.col-sm-6 {
   // SMALL MQ
   @include media-breakpoint-up('sm') {
     @include span(6 of 12);
     margin-right: gutter(12);
-
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
   }
 }
 
-.col-md-2 {
+.col-md-6 {
   // MEDIUM MQ
   @include media-breakpoint-up('md') {
     @include span(6 of 12);
@@ -25,7 +21,7 @@
   }
 }
 
-.col-lg-2 {
+.col-lg-6 {
   // large MQ
   @include media-breakpoint-up('lg') {
     @include span(6 of 12);
@@ -33,7 +29,7 @@
   }
 }
 
-.col-xl-2 {
+.col-xl-6 {
   // Extra Large MQ
   @include media-breakpoint-up('xl') {
     @include span(6 of 12);
@@ -41,31 +37,31 @@
   }
 }
 
-.col-sm-3 {
+.col-sm-4 {
   // SMALL MQ
   @include media-breakpoint-up('sm') {
-    @include span(3 of 12);
+    @include span(4 of 12);
     margin-right: gutter(12);
   }
 }
 
-.col-md-3 {
+.col-md-4 {
   @include media-breakpoint-up('md') {
-    @include span(3 of 12);
+    @include span(4 of 12);
     margin-right: gutter(12);
   }
 }
 
-.col-lg-3 {
+.col-lg-4 {
   @include media-breakpoint-up('lg') {
-    @include span(3 of 12);
+    @include span(4 of 12);
     margin-right: gutter(12);
   }
 }
 
-.col-xl-3 {
+.col-xl-4 {
   @include media-breakpoint-up('xl') {
-    @include span(3 of 12);
+    @include span(4 of 12);
     margin-right: gutter(12);
   }
 }
@@ -73,6 +69,14 @@
 .omega-child-2n {
   > * {
     &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.omega-child-3n {
+  > * {
+    &:nth-child(3n) {
       margin-right: 0;
     }
   }
@@ -100,14 +104,6 @@
   // LARGE MQ
   @include media-breakpoint-only('lg') {
     &:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
-}
-
-.omega-child-3n {
-  > * {
-    &:nth-child(3n) {
       margin-right: 0;
     }
   }

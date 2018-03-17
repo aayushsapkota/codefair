@@ -6,3 +6,13 @@
   $theme-color: map-get($colors, $color);
   @return if($theme-color != 0, $theme-color, null);
 }
+
+@mixin pad(){
+  padding-right: 12px;
+  padding-left: 12px;
+  // SMALL MQ
+  @include media-breakpoint-up("sm") {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}

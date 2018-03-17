@@ -6,7 +6,7 @@
   }
 }
 .banner {
-  background-image: url('https://images.pexels.com/photos/207962/pexels-photo-207962.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb');
+  background-image: url('http://kiallfrost.com.au/wp-content/uploads/2014/12/Darwin-Nightcliff-jetty2.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,4 +40,5 @@
 
 .banner__cta-btn{
   max-width: 180px;
+  transition: background-color 0.25s ease-in-out
 }

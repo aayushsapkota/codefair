@@ -16,6 +16,16 @@ body {
   @include debug_baseline();
 }
 
+.wrap{
+  @include padding-trailer(2);
+  @include padding-trailer(2);
+  // SMALL MQ
+  @include media-breakpoint-up("sm") {
+    @include padding-leader(4);
+    @include padding-trailer(3);
+  }
+}
+
 .container {
   padding-left: 12px;
   padding-right: 12px;
