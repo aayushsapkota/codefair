@@ -1,0 +1,211 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M512 20.48c-271.462 0-491.52 220.058-491.52 491.52s220.058 491.52 491.52 491.52 491.52-220.058 491.52-491.52-220.058-491.52-491.52-491.52zM628.429 360.141h-73.882c-8.755 0-18.483 11.52-18.483 26.829v53.35h92.416l-13.978 76.083h-78.438v228.403h-87.194v-228.403h-79.104v-76.083h79.104v-44.749c0-64.205 44.544-116.378 105.677-116.378h73.882v80.947z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "facebook-with-circle"
+        ],
+        "grid": 20
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 0,
+        "name": "facebook-with-circle",
+        "prevSize": 20,
+        "code": 59648
+      },
+      "setIdx": 0,
+      "setId": 4,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M512 576l256-256h-192v-256h-128v256h-192zM744.726 471.272l-71.74 71.742 260.080 96.986-421.066 157.018-421.066-157.018 260.080-96.986-71.742-71.742-279.272 104.728v256l512 192 512-192v-256z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "download",
+          "save",
+          "store",
+          "arrow"
+        ],
+        "defaultCode": 59744,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "download, save",
+        "name": "download",
+        "order": 7,
+        "id": 1,
+        "prevSize": 32,
+        "code": 59744
+      },
+      "setIdx": 0,
+      "setId": 4,
+      "iconIdx": 1
+    },
+    {
+      "icon": {
+        "paths": [
+          "M440.236 635.766c-13.31 0-26.616-5.076-36.77-15.23-95.134-95.136-95.134-249.934 0-345.070l192-192c46.088-46.086 107.36-71.466 172.534-71.466s126.448 25.38 172.536 71.464c95.132 95.136 95.132 249.934 0 345.070l-87.766 87.766c-20.308 20.308-53.23 20.308-73.54 0-20.306-20.306-20.306-53.232 0-73.54l87.766-87.766c54.584-54.586 54.584-143.404 0-197.99-26.442-26.442-61.6-41.004-98.996-41.004s-72.552 14.562-98.996 41.006l-192 191.998c-54.586 54.586-54.586 143.406 0 197.992 20.308 20.306 20.306 53.232 0 73.54-10.15 10.152-23.462 15.23-36.768 15.23z",
+          "M256 1012c-65.176 0-126.45-25.38-172.534-71.464-95.134-95.136-95.134-249.934 0-345.070l87.764-87.764c20.308-20.306 53.234-20.306 73.54 0 20.308 20.306 20.308 53.232 0 73.54l-87.764 87.764c-54.586 54.586-54.586 143.406 0 197.992 26.44 26.44 61.598 41.002 98.994 41.002s72.552-14.562 98.998-41.006l192-191.998c54.584-54.586 54.584-143.406 0-197.992-20.308-20.308-20.306-53.232 0-73.54 20.306-20.306 53.232-20.306 73.54 0.002 95.132 95.134 95.132 249.932 0.002 345.068l-192.002 192c-46.090 46.088-107.364 71.466-172.538 71.466z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "link",
+          "chain",
+          "url",
+          "uri",
+          "anchor"
+        ],
+        "defaultCode": 59851,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "link, chain",
+        "name": "link",
+        "order": 8,
+        "id": 2,
+        "prevSize": 32,
+        "code": 59851
+      },
+      "setIdx": 0,
+      "setId": 4,
+      "iconIdx": 2
+    },
+    {
+      "icon": {
+        "paths": [
+          "M1013.8 307.2c0 0-10-70.6-40.8-101.6-39-40.8-82.6-41-102.6-43.4-143.2-10.4-358.2-10.4-358.2-10.4h-0.4c0 0-215 0-358.2 10.4-20 2.4-63.6 2.6-102.6 43.4-30.8 31-40.6 101.6-40.6 101.6s-10.2 82.8-10.2 165.8v77.6c0 82.8 10.2 165.8 10.2 165.8s10 70.6 40.6 101.6c39 40.8 90.2 39.4 113 43.8 82 7.8 348.2 10.2 348.2 10.2s215.2-0.4 358.4-10.6c20-2.4 63.6-2.6 102.6-43.4 30.8-31 40.8-101.6 40.8-101.6s10.2-82.8 10.2-165.8v-77.6c-0.2-82.8-10.4-165.8-10.4-165.8zM406.2 644.8v-287.8l276.6 144.4-276.6 143.4z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "youtube",
+          "brand",
+          "social"
+        ],
+        "defaultCode": 60061,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "youtube, brand21",
+        "name": "youtube",
+        "order": 6,
+        "id": 3,
+        "prevSize": 32,
+        "code": 60061
+      },
+      "setIdx": 0,
+      "setId": 4,
+      "iconIdx": 3
+    },
+    {
+      "icon": {
+        "paths": [
+          "M928 0h-832c-52.8 0-96 43.2-96 96v832c0 52.8 43.2 96 96 96h832c52.8 0 96-43.2 96-96v-832c0-52.8-43.2-96-96-96zM384 832h-128v-448h128v448zM320 320c-35.4 0-64-28.6-64-64s28.6-64 64-64c35.4 0 64 28.6 64 64s-28.6 64-64 64zM832 832h-128v-256c0-35.4-28.6-64-64-64s-64 28.6-64 64v256h-128v-448h128v79.4c26.4-36.2 66.8-79.4 112-79.4 79.6 0 144 71.6 144 160v288z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "linkedin",
+          "brand",
+          "social"
+        ],
+        "defaultCode": 60105,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "linkedin, brand64",
+        "name": "linkedin",
+        "order": 4,
+        "id": 4,
+        "prevSize": 32,
+        "code": 60105
+      },
+      "setIdx": 0,
+      "setId": 4,
+      "iconIdx": 4
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "icons"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icons",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "showSelector": true,
+      "selector": "",
+      "showMetrics": false,
+      "showMetadata": false,
+      "showVersion": false,
+      "noie8": true,
+      "ie7": false,
+      "classSelector": ".icon",
+      "includeMetadata": false,
+      "autoHost": false,
+      "resetPoint": 59648,
+      "ligaReset": "names",
+      "cssVars": true,
+      "cssVarsFormat": "scss"
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": false,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "height": 32,
+      "columns": 16,
+      "margin": 16,
+      "minifyJs": false
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16,
+    "showLiga": true,
+    "quickUsageToken": {
+      "UntitledProject": "ZTMwZWJiMDBhMjNmNzA2Njg2OWIyZDQ0MTMxN2I3MmMjMSMxNTIxMTk2NjE0IyMj"
+    }
+  }
+}

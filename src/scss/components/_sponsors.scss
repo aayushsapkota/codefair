@@ -10,7 +10,7 @@
   // MEDIUM MQ
   @include media-breakpoint-up('md') {
     @include padding-leader(4);
-    @include padding-trailer(4);
+    @include padding-trailer(3);
   }
 }
 .wrap + .sponsors {
@@ -78,7 +78,7 @@
 
 .sponsors__item-img {
   width: 100%;
-  height: 100%;
+  height: 150px;
   padding: 8px 12px;
   @include object-fit(contain, center);
 }

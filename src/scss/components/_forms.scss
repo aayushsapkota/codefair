@@ -1,0 +1,64 @@
+.form__outer_wrap{
+  @extend .wrap;
+}
+
+.form {
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  color: theme-color(primary);
+  .btn {
+    @include margin-leader(3);
+    width: auto;
+    max-width: 200px;
+  }
+}
+
+.form__title{
+  @include base-base(42px, $hff, 2, 0);
+}
+
+.form__label {
+  display: block;
+  @include base-base(16px, $hff, 0);
+  color: theme-color(tertiary);
+}
+
+.form__input {
+  color: theme-color(dark);
+  display: block;
+  @include base-base(14px, $hff, 2);
+  width: 100%;
+  max-width: 800px;
+  border: 0;
+  border-bottom: 3px solid theme-color(tertiary);
+  transition: border-bottom-color 0.2s ease-in;
+  &:focus {
+    outline: none;
+    border: 0;
+    border-bottom: 3px solid theme-color(tertiary);
+  }
+  &:invalid {
+    box-shadow: none;
+  }
+  &.has-success{
+    border-bottom-color: theme-color(success);
+  }
+  &.has-error{
+    border-bottom-color: theme-color(secondary);
+  }
+}
+
+.form__radio-input {
+  display: inline-block;
+  width: auto;
+  @include base-base(14px, $hff, 0);
+}
+
+.form__radio-label {
+  @extend .form__label;
+  padding-left: 12px;
+  @include base-base(14px, $hff, 0);
+  color: theme-color(dark);
+  display: inline-block;
+  width: auto;
+}
