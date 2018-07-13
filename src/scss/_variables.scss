@@ -20,7 +20,7 @@ $theme-colors: (
   "success":    green,
   "info":       skyblue,
   "warning":    yellow,
-  "danger":     #f2f2f2,
+  "danger":     $red,
   "light":      white,
   "dark":       $black
 );
@@ -33,23 +33,22 @@ $default-font-family: 'roboto';
 $hff: $heading-font-family;
 $dff: $default-font-family;
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
-
-
 // Grid containers
 // Define the maximum width of `.container` for different screen sizes.
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
-) !default;
+  xl: 1200px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
 
 //grid size span and gutter defaults
 $_susy-defaults: (

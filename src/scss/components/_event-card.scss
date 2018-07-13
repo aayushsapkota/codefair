@@ -73,9 +73,10 @@
 }
 
 .event-card__combined-heading {
-  width: calc(100% - 120px - 48px- 16px );
+  width: calc(100% - 114px);
   flex-grow: 1;
-  min-width: 160px;
+  min-width: 165px;
+  display: block;
 }
 
 .event-card__grid-title {
@@ -92,8 +93,8 @@
 
 .event-card__img {
   display: block;
-  width: 112px;
-  height: 112px;
+  width: 96px;
+  height: 100%;
   margin-right: 16px;
   @include object-fit(contain, center);
 }

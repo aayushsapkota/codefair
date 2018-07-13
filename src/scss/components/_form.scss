@@ -1,0 +1,143 @@
+
+.form {
+  @include padding-leader(1);
+  @include padding-trailer(1);
+
+  .btn {
+    @include margin-leader(3);
+    width: auto;
+    max-width: 200px;
+  }
+}
+
+.form__title{
+  @include base-base(28px, $hff, 1, 0);
+}
+
+.form__outer_wrap {
+  @extend .wrap;
+}
+
+.form--inline{
+  display: inline-block;
+}
+
+.btn +.form--card {
+  margin-left: 12px;
+}
+
+.form__label {
+  display: block;
+  font-weight: 500;
+  @include base-base(16px, $hff, 0);
+  color: theme-color(tertiary);
+}
+
+.form__label-inline {
+  display: inline-block;
+  font-weight: 500;
+  @include base-base(16px, $hff, 0);
+  color: theme-color(tertiary);
+}
+
+.form-control {
+  @include padding-trailer(0.5);
+}
+
+.form__input {
+  color: theme-color(dark);
+  display: block;
+  @include base-base(14px, $hff, 1);
+  width: 100%;
+  max-width: 800px;
+  border: 0;
+  padding-left: 3px;
+  border-bottom: 3px solid theme-color(dark);
+  transition: border-bottom-color 0.2s ease-in;
+
+  &:focus {
+    outline: none;
+    border: 0;
+
+    &:invalid {
+      box-shadow: none;
+      border-bottom: 3px solid theme-color(danger);
+    }
+  }
+
+  &:valid {
+    border-bottom: 3px solid theme-color(success);
+  }
+}
+
+.form__input--inline{
+  display: inline-block;
+  width: auto;
+}
+
+.form__input-file {
+  color: theme-color(dark);
+  display: block;
+  @include base-base(14px, $hff, 1);
+  width: 100%;
+  max-width: 800px;
+  border: 0;
+}
+
+.form__input-date {
+  color: theme-color(dark);
+  display: inline-block;
+  width: auto;
+  @include base-base(14px, $hff, 0);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-width: 800px;
+  border: 0;
+}
+
+.form__radio-input {
+  display: inline-block;
+  width: auto;
+  @include base-base(14px, $hff, 0);
+}
+
+.form__radio-label {
+  @extend .form__label;
+  padding-left: 12px;
+  @include base-base(14px, $hff, 0);
+  color: theme-color(dark);
+  display: inline-block;
+  width: auto;
+}
+
+.form__error {
+  background-color: theme-color(danger);
+  font-size: 18px;
+  font-family: $dff;
+  color: white;
+}
+
+.form__flash {
+  font-size: 18px;
+  font-family: $dff;
+  color: white;
+  margin-bottom: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  @include pad();
+  @include media-breakpoint-up("lg") {
+    @include get-container-max-width("lg");
+  }
+  @include media-breakpoint-up("xl") {
+    @include get-container-max-width("xl");
+  }
+}
+
+.form__error-wrap {
+  background-color: theme-color(danger);
+  border-bottom: 2px solid white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

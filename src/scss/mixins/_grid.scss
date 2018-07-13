@@ -16,7 +16,7 @@ body {
   @include debug_baseline();
 }
 
-.wrap{
+.wrap {
   @include padding-trailer(2);
   @include padding-trailer(2);
   // SMALL MQ
@@ -35,7 +35,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
 
-  > *{
+  > * {
     width: 100%;
   }
 
