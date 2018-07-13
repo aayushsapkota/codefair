@@ -9,9 +9,7 @@ var PRODUCTION = process.env.NODE_ENV === 'production';
 
 var entry = PRODUCTION ?   [ './src/js/main.js']
 : [
-  './src/js/main.js',
-  'webpack/hot/dev-server.js',
-  'webpack-dev-server/client?http://codefair.local:80'
+  './src/js/main.js'
 ];
 
 var plugins = PRODUCTION  ?    [
@@ -40,13 +38,11 @@ var plugins = PRODUCTION  ?    [
       filename: 'main.bundle.js'
     },
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.js$/,
-          loaders: ['babel-loader'],
-        }
-      ],
-      rules: [
+          use: ['babel-loader']
+        },
         {
           test: /\.scss$/,
           use: ExtractTextPlugin.extract({
