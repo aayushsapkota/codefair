@@ -1,51 +1,38 @@
 <section class="sponsors">
   <div class="container">
-    <h2 class="sponsors__title">We thank our humble sponsors:</h2>
+  [[#1.tvFooterSponsorsHeading:notempty=`<h2 class="sponsors__title">[[#1.tvFooterSponsorsHeading]]</h2>`]]
     <div class="sponsors__grid">
-      <a href="#" class="sponsors__link">
-        <img src="https://unsplash.it/200/300/" alt="#" class="sponsors__item-img">
-      </a>
-      <a href="#" class="sponsors__link">
-        <img src="http://unsplash.it/600/400" alt="#" class="sponsors__item-img">
-      </a>
-      <a href="#" class="sponsors__link">
-        <img src="https://itcodefair.cdu.edu.au/images/logos/acs.png" alt="#" class="sponsors__item-img">
-      </a>
-      <a href="#" class="sponsors__link">
-        <img src="https://itcodefair.cdu.edu.au/images/logos/dash.png" alt="#" class="sponsors__item-img">
-      </a>
-      <a href="#" class="sponsors__link">
-        <img src="http://unsplash.it/700/300" alt="#" class="sponsors__item-img">
-      </a>
-      <a href="#" class="sponsors__link">
-        <img src="http://unsplash.it/800/400" alt="#" class="sponsors__item-img">
-      </a>
-      <a href="#" class="sponsors__link">
-        <img src="https://unsplash.it/200/300/" alt="#" class="sponsors__item-img">
-      </a>
-      <a href="#" class="sponsors__link">
-        <img src="https://unsplash.it/200/300/" alt="#" class="sponsors__item-img">
-      </a>
+
+      [[!getImageList?
+          &tvname=`tvFooterSponsorsGrid`
+          &tpl=`tplSponsorsGridItem`
+          &limit=`0`
+          &docid=`1`
+      ]]
 
     </div>
   </div>
 </section>
+
 <footer class="footer">
   <div class="container ">
     <div class="footer__inner-wrap">
       <div class="rte">
-        <p>&copy; Charles Darwin University 2018,<a href="#"> Privacy Policy</a>,<a href="#"> Terms and Conditions</a></p>
+        <p>&copy; [[++footer_copyright_text]][[++privacy_policy_link:notempty=`,<a href="[[++privacy_policy_link:urlClean]]"> Privacy Policy</a>`]][[++terms_and_conditions_link:notempty=`,<a href="[[++terms_and_conditions_link:urlClean]]"> Terms and Conditions</a>`]]</p>
       </div>
       <div class="footer__icon-list">
-        <a href="#" class="footer__facebook-link footer__icon-link">
+        [[++facebook_page_link:notempty=`<a href="[[++facebook_page_link:urlClean]]" class="footer__facebook-link footer__icon-link">
           <p><span class="icon-facebook-with-circle"></span></p>
-        </a>
-        <a href="#" class="footer__youtube-link footer__icon-link">
+        </a>`]]
+        [[++youtube_link:notempty=`<a href="[[++youtube_link:urlClean]]" class="footer__youtube-link footer__icon-link">
           <p><span class="icon-youtube"></span></p>
-        </a>
-        <a href="#" class="footer__linkedin-link footer__icon-link">
+        </a>`]]
+        [[++linkedin_profile_link:notempty=`<a href="[[++linkedin_profile_link:urlClean]]" class="footer__linkedin-link footer__icon-link">
           <p><span class="icon-linkedin"></span></p>
-        </a>
+        </a>`]]
+        [[++instagram_profile_link:notempty=`<a href="[[++instagram_profile_link:urlClean]]" class="footer__instagram-link footer__icon-link">
+          <p><span class="icon-instagram"></span></p>
+        </a>`]]
       </div>
     </div>
   </div>

@@ -4,8 +4,31 @@
   <meta charset="utf-8">
   <base href="[[++site_url]]" />
   <title>[[++site_name]] | [[*pagetitle]]</title>
-  <link rel="stylesheet" href="/build/main.bundle.css" />
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <link rel="stylesheet" href="/build/main.bundle.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="/build/main.bundle.js"></script>
 </head>
 <body>
+  <header class="header">
+    <section class="header__nav-strip">
+      <div class="container">
+        <a class="header__logo-link" href="[[++site_start]]" alt="cdu logo">
+          [[++cdu_logo:notempty=`<img class="header__cdu-logo header__logo" src="[[++cdu_logo:phpthumbof=`w=200&q=90`]]" alt="CDU Logo">`]]
+        </a>
+        <a class="header__logo-link" href="[[++site_start:urlClean=`full`]]" alt="codefair logo">
+          [[++site_logo:notempty=`<img class="header__logo header__codefair-logo" src="[[++site_logo:phpthumbof=`w=200&q=90`]]" alt="[[+site_name]] Logo"></a>`]]
+
+          <nav class="header__nav">
+            [[Wayfinder?
+            &startId=`0`
+            &level=`1`
+            &outerTpl=`tplOuterWayfinder` &rowTpl=`tplInnerWayfinder`
+            &firstClass=``
+            &lastClass=``
+            &hereClass=`active`
+            ]]
+          </nav>
+
+        </div>
+      </section>
