@@ -15,7 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   color: white;
-  padding-top: 48px;
+  padding-top: 16px;
   padding-bottom: 24px;
   h2 {
     font-size: 32px;
@@ -41,7 +41,7 @@
       font-size: 34px;
     }
   }
-  
+
 }
 
 .article-img-strip__img{
@@ -50,6 +50,7 @@
   height: auto;
   @include object-fit(cover, center);
   margin-bottom: 32px;
+  max-height: 300px;
 }
 
 // MEDIUM MQ
@@ -89,6 +90,7 @@
     width: 50%;
     height: 100%;
     margin-bottom: 0;
+    max-height: none;
   }
 }
 // MEDIUM MQ

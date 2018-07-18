@@ -33,6 +33,20 @@
             'brand21': '&#xea9d;',
             'linkedin': '&#xeac9;',
             'brand64': '&#xeac9;',
+            'home': '&#xe900;',
+            'house': '&#xe900;',
+            'phone': '&#xe942;',
+            'telephone': '&#xe942;',
+            'location': '&#xe947;',
+            'map-marker': '&#xe947;',
+            'clock': '&#xe94e;',
+            'time2': '&#xe94e;',
+            'facebook2': '&#xea91;',
+            'brand11': '&#xea91;',
+            'instagram': '&#xea92;',
+            'brand12': '&#xea92;',
+            'vk': '&#xea98;',
+            'brand18': '&#xea98;',
           '0': 0
         };
         delete icons['0'];

@@ -3,9 +3,9 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('#{$icomoon-font-path}/icons.ttf?rm0pl') format('truetype'),
-    url('#{$icomoon-font-path}/icons.woff?rm0pl') format('woff'),
-    url('#{$icomoon-font-path}/icons.svg?rm0pl#icons') format('svg');
+    url('#{$icomoon-font-path}/icons.ttf?1lqist') format('truetype'),
+    url('#{$icomoon-font-path}/icons.woff?1lqist') format('woff'),
+    url('#{$icomoon-font-path}/icons.svg?1lqist#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,33 +35,59 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@function unicode($str) {
-  @return unquote("\"") + $str + unquote("\"");
-}
-
-.icon-facebook-with-circle {
-  &:before {
-    content: unicode($icon-facebook-with-circle); 
-  }
-}
 .icon-download {
   &:before {
-    content: unicode($icon-download); 
+    content: $icon-download; 
   }
 }
 .icon-link {
   &:before {
-    content: unicode($icon-link); 
+    content: $icon-link; 
   }
 }
 .icon-youtube {
   &:before {
-    content: unicode($icon-youtube); 
+    content: $icon-youtube; 
   }
 }
 .icon-linkedin {
   &:before {
-    content: unicode($icon-linkedin); 
+    content: $icon-linkedin; 
+  }
+}
+.icon-home {
+  &:before {
+    content: $icon-home; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-location {
+  &:before {
+    content: $icon-location; 
+  }
+}
+.icon-clock {
+  &:before {
+    content: $icon-clock; 
+  }
+}
+.icon-facebook2 {
+  &:before {
+    content: $icon-facebook2; 
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-vk {
+  &:before {
+    content: $icon-vk; 
   }
 }
 
