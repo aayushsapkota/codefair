@@ -1,0 +1,116 @@
+.slide-nav {
+  position: fixed;
+  top: 56px;
+  left: -280px;
+  background-color: white;
+  height: calc(100vh - 56px);
+  width: 280px;
+  @include padding-leader(2);
+  border-right: 2px solid theme-color(primary);
+  z-index: 3;
+  transition: left 0.3s linear;
+  * {
+    position: relative;
+    z-index: 3;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.slide-nav--active {
+  display: block;
+  left: 0;
+}
+
+.slide-nav__list {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+
+  li {
+    &.active {
+      a {
+        background-color: theme-color(primary);
+        color: white;
+      }
+    }
+    a {
+      display: block;
+      @include base-base(16px, $hff, 1, 0, $lines: 1.5);
+      font-weight: 400;
+      color: theme-color(primary);
+      text-decoration: none;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      margin-bottom: 0;
+      width: 100%;
+      transition: all linear 0.25s;
+      &:active,
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        outline: none;
+        color: theme-color(primary);
+        background-color: mix(theme-color(primary), white, 10%);
+      }
+
+
+    }
+  }
+
+  ul {
+    // display: none;
+    li {
+      &.active {
+        a {
+            background-color: mix(white, theme-color(primary), 20%);
+            &:active,
+            &:focus,
+            &:hover {
+              color: theme-color(primary);
+              background-color: mix(theme-color(primary), white, 10%);
+            }
+        }
+      }
+      a {
+        position: relative;
+        padding-left: 52px;
+        &::before {
+          content: "\e903";
+          position: absolute;
+          top: 6px;
+          left: 28px;
+          font-size: 14px;
+          font-family: 'icons';
+        }
+      }
+    }
+  }
+  ul.open {
+    display: block;
+  }
+}
+
+.slide-nav__overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  z-index: 2;
+  background-color:rgba(theme-color(primary), 0.6);
+}
+
+.slide-nav--active ~ .slide-nav__overlay{
+  display: block;
+}
