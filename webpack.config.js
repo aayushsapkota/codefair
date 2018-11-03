@@ -7,9 +7,9 @@ var DEVELOPMENT = process.env.NODE_ENV === 'development';
 var PRODUCTION = process.env.NODE_ENV === 'production';
 
 
-var entry = PRODUCTION ?   [ './src/js/main.js']
+var entry = PRODUCTION ?   [ './src/main.js']
 : [
-  './src/js/main.js'
+  './src/main.js'
 ];
 
 var plugins = PRODUCTION  ?    [
@@ -71,6 +71,15 @@ var plugins = PRODUCTION  ?    [
                 }
               }]
             })
+          },  {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }]
           }
         ]
       }
