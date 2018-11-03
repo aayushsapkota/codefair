@@ -1,15 +1,15 @@
 [[$head]]
-    <div class="banner__outer_wrap">
-      <section class="banner" style="background-image:url('[[*tvBannerBgImage:default=`[[#1.tvBannerBgImage]]`:phpthumbof=`w=1920&q=75`]]')">
-        <div class="container banner__inner-wrap">
-          <div class="banner__text">
-            [[*tvBannerHeading:notempty=`<h1 class="combined-heading">
-              <strong class="combined__heading-title">[[*tvBannerHeading]]</strong>
-              [[*tvBannerSubHeading:notempty=`<span class="combined-heading__tagline">[[*tvBannerSubHeading]]</span>`]]
-            </h1>`]]
-            [[*tvBannerBtnTarget:notempty=`<a href="[[*tvBannerBtnTarget:urlClean]]" class="banner__cta-btn btn">[[*tvBannerBtnLabel]]</a>`]]
-          </div>
-        </div>
-      </section>
+
+<div class="banner__outer_wrap">
+  <section class="banner" style="background-image:url('[[*tvBannerBgImage:default=`[[#1.tvBannerBgImage]]`:phpthumbof=`w=1920&q=75`]]')">
+    <div class="container banner__inner-wrap">
+      <div class="banner__text">
+        <h1 class="combined-heading">
+          <strong class="combined__heading-title">[[*tvBannerHeading:default=`[[*pagetitle]]`]]</strong>
+          [[*tvBannerSubHeading:notempty=`<span class="combined-heading__tagline">[[*tvBannerSubHeading]]</span>
+        </h1>`]]
+        [[*tvBannerBtnTarget:notempty=`<a href="[[*tvBannerBtnTarget:urlClean]]" class="banner__cta-btn btn">[[*tvBannerBtnLabel]]</a>`]]
+      </div>
     </div>
-  </header>
+  </section>
+</div>
