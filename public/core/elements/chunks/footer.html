@@ -35,7 +35,10 @@
 </footer>
 
 <div class="slide-nav">
+  <button type="close" name="close" title="Close Nav" class="slide-nav__close">Close Navigation</button>
+  <h2>[[++site_name]]</h2>
   <ul class="slide-nav__list">
+
     [[!pdoMenu?
     &parents=`0`
     &level=`2`
@@ -54,7 +57,7 @@
 </div>
 <div class="overlay-nav">
   <button type="button" name="overlay-nav__button" class="overlay-nav__button">Menu</button>
-  [[pdoCrumbs? &showHome=`1` &showAtHome=`0`]]
+  [[!pdoCrumbs? &showHome=`1` &showAtHome=`0`]]
 </div>
 <div class="slide-nav__overlay"></div>
 

@@ -2,7 +2,7 @@
   width: 100%;
   background-color: white;
   position: fixed;
-  top: -56px;
+  top: 0;
   left: 0;
   height: 56px;
   z-index: 3;
@@ -10,6 +10,10 @@
   transition: top linear 0.2s;
   display: flex;
   flex-wrap: wrap;
+  // MEDIUM MQ
+  @include media-breakpoint-up("md") {
+    top: -56px;
+  }
 
   .breadcrumb {
     width: calc(100% - 145px);
@@ -19,6 +23,14 @@
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    display: none;
+    overflow: hidden;
+
+    // SMALL MQ
+    @include media-breakpoint-up("sm") {
+      display: flex
+    }
+
     li {
       width: auto;
       padding-right: 24px;
@@ -26,6 +38,8 @@
       padding-top: 16px;
       padding-bottom: 16px;
       height: 56px;
+      overflow: hidden;
+
       a {
         color: theme-color(primary);
         text-decoration: none;
@@ -33,7 +47,9 @@
         transition: border linear 0.2s;
         position: relative;
 
-        &:hover, &:active, &:focus {
+        &:active,
+        &:focus,
+        &:hover {
           border-bottom: 2px solid theme-color(primary);
         }
 
@@ -50,9 +66,11 @@
     }
   }
 }
+
 .overlay-nav--active {
   top: 0;
 }
+
 .slide-nav--active +.overlay-nav--active {
   .overlay-nav__button {
     &:before {
@@ -66,10 +84,7 @@
 .overlay-nav__button {
   @include base-base(16px, $hff, 1, 0, $lines: 1.5);
   font-weight: 500;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 32px;
-  padding-right: 12px;
+  padding: 8px 12px 8px 32px;
   margin-left: 24px;
   margin-top: 5px;
   background-color: transparent;

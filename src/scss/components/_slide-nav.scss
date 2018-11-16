@@ -1,13 +1,13 @@
 .slide-nav {
   position: fixed;
-  top: 56px;
+  top: 0px;
   left: -280px;
   background-color: white;
-  height: calc(100vh - 56px);
+  min-height: 100vh;
   width: 280px;
   @include padding-leader(2);
   border-right: 2px solid theme-color(primary);
-  z-index: 3;
+  z-index: 4;
   transition: left 0.3s linear;
   * {
     position: relative;
@@ -21,6 +21,37 @@
       padding: 0;
       margin: 0;
     }
+  }
+  h2 {
+    padding-left: 24px;
+  }
+}
+
+.slide-nav__close {
+  background-color: transparent;
+  appearance: none;
+  border: none;
+  position: absolute;
+  padding-left: 32px;
+  @include base-base(14px, $dff, 1, $lines: 1.5);
+  padding-top: 8px;
+  cursor: pointer;
+  top: 0;
+  right: 12px;
+  font-weight: 500;
+
+
+  &::before {
+    content: $icon-x;
+    position: absolute;
+    font-family: 'icons';
+    display: block;
+    top: 7px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    font-weight: 500;
+
   }
 }
 

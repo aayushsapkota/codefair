@@ -5,6 +5,10 @@
   margin-left: span($context, $config);
 }
 
+.col-fw {
+  width: 100%;
+}
+
 .col-sm-6 {
   // SMALL MQ
   @include media-breakpoint-up('sm') {

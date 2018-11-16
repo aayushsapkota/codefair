@@ -4,6 +4,7 @@ module.exports = class Slidenav {
       'slideNavClass' : 'slide-nav',
       'slideNavActiveClass': "slide-nav--active",
       'slideNavOverlayClass': 'slide-nav__overlay',
+      "slideNavBtnCloseClass":"slide-nav__close",
       'overlayNavClass': 'overlay-nav',
       'overlayNavClassActive': 'overlay-nav--active',
       'overlayNavOpenBtnClass': 'overlay-nav__button'
@@ -54,6 +55,9 @@ module.exports = class Slidenav {
       // console.log(target);
       //hide slidenav if clicked else where
       if(target.classList.contains(obj.slideNavOverlayClass)){
+        slideNav.classList.remove(obj.slideNavActiveClass);
+      }
+      if(target.classList.contains(obj.slideNavBtnCloseClass)){
         slideNav.classList.remove(obj.slideNavActiveClass);
       }
       if(target.classList.contains(obj.overlayNavClass)){
