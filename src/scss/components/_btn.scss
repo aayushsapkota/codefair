@@ -18,12 +18,17 @@
   position: relative;
   transition: all 0.2s ease-in;
   border: 0;
+
   &:active,
   &:focus,
   &:hover {
     text-decoration: none;
     color: white;
-    background-color: theme-color(primary);
+    background-color: mix(white, theme-color(secondary), 10%);
+  }
+
+  &:active {
+    background-color: mix(white, theme-color(secondary), 20%);
   }
 }
 

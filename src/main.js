@@ -13,7 +13,7 @@ import slideNav from './js/slideNav.js';
 
 ready(function(){
   objectFitImages();
-  
+
   new slideNav();
 });
 

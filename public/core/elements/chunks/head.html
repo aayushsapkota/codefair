@@ -21,14 +21,20 @@
           [[++site_logo:notempty=`<img class="header__logo header__codefair-logo" src="[[++site_logo:phpthumbof=`w=200&q=90`]]" alt="[[+site_name]] Logo"></a>`]]
 
           <nav class="header__nav">
-            [[Wayfinder?
-            &startId=`0`
-            &level=`1`
-            &outerTpl=`tplOuterWayfinder` &rowTpl=`tplInnerWayfinder`
-            &firstClass=``
-            &lastClass=``
-            &hereClass=`active`
+            [[pdoMenu?
+                &startId=`0`
+                &resources=`-1`
+                &level=`1`
+                &outerTpl=`tplOuterWayfinder`
+                &rowTpl=`tplInnerWayfinder`
+                &firstClass=``
+                &lastClass=``
+                &hereClass=`active`
             ]]
+
+            [[++contact_page:notempty=`<a href="[[++contact_page:urlClean]]" class="header__nav-cta btn">Register</a>`]]
+
+
           </nav>
 
         </div>

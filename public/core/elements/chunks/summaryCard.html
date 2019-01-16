@@ -1,0 +1,15 @@
+<article class="summary-card col-sm-6 col-lg-4">
+  <img class="summary-card__img" src="[[+image]]" alt="[[+imageAlt]]">
+  <div class="summary-card__text">
+    <h3 class="combined-heading">
+      [[+heading:notempty=`<strong class="summary-card__title combined-heading__title">[[+heading:htmlent]]</strong>`]]
+      [[+subHeading:notempty=`<span class="combined-heading__tagline">[[+subHeading:htmlent]]</span>`]]
+    </h3>
+    [[+description:notempty=`<div class="rte">
+      [[+description]]
+    </div>`]]
+    <div class="summary-card__btn-wrap">
+      [[+btnTarget:notempty=`<a href="[[+btnTarget:urlClean]]" class="summary-card__btn btn">[[+btnLabel:htmlent]]</a>`]]
+    </div>
+  </div>
+</article>

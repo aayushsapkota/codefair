@@ -1,0 +1,37 @@
+[[$head]]
+
+<section class="wrap">
+
+  <div class="container">
+    <div class="content-page">
+      <h1>[[*tvFormsHeading:default=`[[*longtitle]]`:htmlent]]</h1>
+
+      [[*tvFormsDescription:notempty=`<div class="rte">
+        [[*tvFormsDescription]]
+      </div>`]]
+    </div>
+
+  </div>
+
+</section>
+
+[[*parent:is=`0`:then=``:else=`<section class="summary-card__outer-warp">
+  <div class="container">
+    [[#[[*parent]].tvEventsHeading:notempty=`<h2 class="summary-card__grid-title">[[#[[*parent]].tvEventsHeading]]</h2>`]]
+    <div class="summary-card__grid">
+      [[pdoResources?
+          &parents=`[[*parent]]`
+          &tpl=`[[*parent:is=`2`:then=`tplEventCardItem`:else=`tplSummaryCard`]]`
+          &tvPrefix=``
+          &includeTVs=`tvSummaryCardDescription,tvSummaryCardHeading,tvSummaryCardImage`
+          &processTVs=`tvSummaryCardImage`
+          &includeContent=`0`
+          &limit=`0`
+          &depth=`0`
+      ]]
+
+    </div>
+  </div>
+</section>`]]
+
+[[$footer]]

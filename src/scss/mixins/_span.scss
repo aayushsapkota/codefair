@@ -1,6 +1,7 @@
 @mixin span($context: susy-get('columns'), $config: ()) {
   width: span($context, $config);
 }
+
 @mixin push($context: susy-get('columns'), $config: ()) {
   margin-left: span($context, $config);
 }
@@ -9,106 +10,47 @@
   width: 100%;
 }
 
-.col-sm-6 {
-  // SMALL MQ
-  @include media-breakpoint-up('sm') {
-    @include span(6 of 12);
-    margin-right: gutter(12);
-  }
-}
-
-.col-md-6 {
-  // MEDIUM MQ
-  @include media-breakpoint-up('md') {
-    @include span(6 of 12);
-    margin-right: gutter(12);
-  }
-}
-
-.col-lg-6 {
-  // large MQ
-  @include media-breakpoint-up('lg') {
-    @include span(6 of 12);
-    margin-right: gutter(12);
-  }
-}
-
-.col-xl-6 {
-  // Extra Large MQ
-  @include media-breakpoint-up('xl') {
-    @include span(6 of 12);
-    margin-right: gutter(12);
-  }
-}
-
-.col-sm-4 {
-  // SMALL MQ
-  @include media-breakpoint-up('sm') {
-    @include span(4 of 12);
-    margin-right: gutter(12);
-  }
-}
-
-.col-md-4 {
-  @include media-breakpoint-up('md') {
-    @include span(4 of 12);
-    margin-right: gutter(12);
-  }
-}
-
-.col-lg-4 {
-  @include media-breakpoint-up('lg') {
-    @include span(4 of 12);
-    margin-right: gutter(12);
-  }
-}
-
-.col-xl-4 {
-  @include media-breakpoint-up('xl') {
-    @include span(4 of 12);
-    margin-right: gutter(12);
-  }
-}
-
-.omega-child-2n {
-  > * {
-    &:nth-child(2n) {
-      margin-right: 0;
+@for $j from 2 to 6 {
+  .omega-child-#{$j}n {
+    > * {
+      &:nth-child(#{$j}n) {
+        margin-right: 0;
+      }
     }
   }
 }
 
-.omega-child-3n {
-  > * {
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
-  }
-}
 
-.omega-child-sm-only-2n {
-  // SMALL ONLY
-  @include media-breakpoint-only('sm') {
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
-}
+@each $breakpoint, $value in $grid-breakpoints {
+  @for $i from 1 through 12 {
+    @include media-breakpoint-up(#{$breakpoint}) {
+      .col-#{$breakpoint}-#{$i} {
+        @include span($i of 12);
+        margin-right: gutter(12);
+      }
 
-.omega-child-md-only-2n {
-  // MEDIUM MQ
-  @include media-breakpoint-only('md') {
-    &:nth-child(2n) {
-      margin-right: 0;
+      .omega-child-#{$breakpoint}-#{$i}n {
+        > * {
+          &:nth-child(#{$i}n){
+            margin-right: 0;
+          }
+        }
+      }
     }
-  }
-}
 
-.omega-child-lg-only-2n {
-  // LARGE MQ
-  @include media-breakpoint-only('lg') {
-    &:nth-child(2n) {
-      margin-right: 0;
+    @include media-breakpoint-only(#{$breakpoint}) {
+      .col-#{$breakpoint}-only-#{$i} {
+        @include span($i of 12);
+        margin-right: gutter(12);
+      }
+
+      .omega-child-#{$breakpoint}-only-#{$i}n {
+        > * {
+          &:nth-child(#{$i}n){
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 }
