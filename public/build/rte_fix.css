@@ -1,0 +1,22 @@
+blockquote,
+h2,
+h3,
+h4,
+h5,
+ol,
+p,
+ul {
+  padding: 12px;
+  margin-bottom: 4px;
+  margin-top: 1px;
+  background-color: white;
+}
+
+.mce-content-body {
+  background-color: #e8e8e8;
+  margin: 4px;
+}
+
+.mce-container iframe {
+  min-height: 200px;
+}
