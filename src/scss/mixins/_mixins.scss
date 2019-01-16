@@ -1,6 +1,6 @@
+@import "grid";
 @import "breakpoints";
 @import "span";
-@import "grid";
 
 @function theme-color($color, $colors: $theme-colors) {
   $theme-color: map-get($colors, $color);

@@ -27,6 +27,9 @@
       .col-#{$breakpoint}-#{$i} {
         @include span($i of 12);
         margin-right: gutter(12);
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       .omega-child-#{$breakpoint}-#{$i}n {
@@ -36,12 +39,19 @@
           }
         }
       }
+
+      .push-#{$breakpoint}-#{$i} {
+        @include push($i of 12);
+      }
     }
 
     @include media-breakpoint-only(#{$breakpoint}) {
       .col-#{$breakpoint}-only-#{$i} {
         @include span($i of 12);
         margin-right: gutter(12);
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       .omega-child-#{$breakpoint}-only-#{$i}n {

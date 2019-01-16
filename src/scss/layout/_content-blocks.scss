@@ -1,0 +1,49 @@
+$padding-sm: 2;
+$padding-md: 3;
+$padding-lg: 4;
+$alternate-color: theme-color("primary");
+
+.content-blocks {
+  @include padding-leader($padding-sm);
+  @include padding-trailer($padding-sm);
+  // MEDIUM MQ
+  @include media-breakpoint-up("md") {
+    @include padding-leader($padding-md);
+    @include padding-trailer($padding-md);
+  }
+  // LARGE MQ
+  @include media-breakpoint-up("lg") {
+    @include padding-leader($padding-lg);
+    @include padding-trailer($padding-lg);
+  }
+}
+
+.content-blocks + .content-blocks {
+  @include padding-leader(0);
+}
+
+.content-blocks--alternate {
+  @include padding-leader($padding-sm);
+  @include padding-trailer($padding-sm);
+  // MEDIUM MQ
+  @include media-breakpoint-up("md") {
+    @include padding-leader($padding-md);
+    @include padding-trailer($padding-md);
+  }
+  // LARGE MQ
+  @include media-breakpoint-up("lg") {
+    @include padding-leader($padding-lg);
+    @include padding-trailer($padding-lg);
+  }
+  background-color: $alternate-color;
+  color: white;
+
+  * {
+    color: white;
+  }
+}
+
+
+.content-blocks--alternate + .content-blocks--alternate {
+  @include padding-leader(0);
+}
