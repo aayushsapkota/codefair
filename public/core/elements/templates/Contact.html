@@ -1,0 +1,96 @@
+[[$head]]
+
+<div class="banner__outer_wrap">
+  <section class="banner banner--small" style="background-image:url('[[*tvBannerBgImage:default=`[[#1.tvBannerBgImage]]`:phpthumbof=`w=1920&q=70`]]')">
+    <div class="container banner__inner-wrap">
+      <div class="banner__text">
+        <h1 class="combined-heading">
+          <strong class="combined__heading-title">[[*tvBannerHeading:default=`[[*longtitle]]`:htmlent]]</strong>
+          [[*tvBannerSubHeading:notempty=`<span class="combined-heading__tagline">[[*tvBannerSubHeading]]</span>`]]
+        </h1>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<section class="forms__outer_wrap">
+
+  <div class="container">
+
+    <div class="forms__card col-md-10 push-md-1">
+      [[!FormIt?
+      &hooks=`spam,redirect,FormItSaveForm,formHandler`
+      &redirectTo=`27`
+      &validate=`yourname-trap:blank`
+      &formFields=`formFields`
+      ]]
+
+      <form class="form form-step" action="[[~[[*id]]]]" method="post">
+
+        <div class="form-step__steps">
+          <button type="button" class="form-step__step-btn ">Your Details</button>
+          <button type="button" class="form-step__step-btn">Competition</button>
+          <button type="button" class="form-step__step-btn">Participation</button>
+          <button type="button" class="form-step__step-btn">Confirmation</button>
+        </div>
+
+        <!-- <div class="form-step__progress-bar"></div> -->
+
+        <fieldset class="step-1 " data-name="Your Details" data-step="1">
+          <div class="form-step__progress-bar form-step__progress-bar"></div>
+          <h3>Your Details</h3>
+          [[!getImagelist?
+          &tvname=`tvForm`
+          &tpl=`inputsStepOne`
+          ]]
+          <button type="button" class="btn form-step__next">Next</button>
+        </fieldset>
+
+        <fieldset class="step-2" data-name="Competition" data-step="2">
+          <div class="form-step__progress-bar form-step__progress-bar--step-2"></div>
+          <h3>Competition</h3>
+          [[!getImagelist?
+          &tvname=`tvForm`
+          &tpl=`inputsStepTwo`
+          ]]
+
+
+          <button type="button" class="btn form-step__previous">Previous</button>
+          <button type="button" class="btn form-step__next">Next</button>
+
+        </fieldset>
+
+        <fieldset class="step-3" data-name="Participation" data-step="3">
+          <div class="form-step__progress-bar form-step__progress-bar--step-3"></div>
+          <h3>Participation</h3>
+          [[!getImagelist?
+          &tvname=`tvForm`
+          &tpl=`inputsStepThree`
+          ]]
+
+          <button type="button" class="btn form-step__previous">Previous</button>
+          <button type="button" class="btn form-step__next form-step__next--last">Next</button>
+        </fieldset>
+
+
+        <fieldset class="step-4" data-name="Confirmation" data-step="4">
+          <div class="form-step__progress-bar form-step__progress-bar--step-4"></div>
+          <h4>Confirm your details</h4>
+          <table class="form-step__confirmation-table">
+
+          </table>
+          <button type="button" class="btn form-step__previous">Previous</button>
+          <button type="submit" class="btn form-step__btn-submit" name="submit-btn">Submit</button>
+        </fieldset>
+        <input type="hidden" name="yourname-trap" value="">
+
+      </form>
+    </div>
+  </div>
+
+</section>
+
+[[*content]]
+
+[[$footer]]

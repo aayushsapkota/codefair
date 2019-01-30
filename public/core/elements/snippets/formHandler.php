@@ -6,19 +6,30 @@ class formHandler {
   private $newInputsArray = array();
 
   public function __construct($modx) {
-    $this->allPostVars = $_POST;
+    // $this->allPostVars = $_POST;
     $this->modx = $modx;
     // $this->logFormVars($this->allPostVars);
 
     $newInputsArray = array();
-    foreach($this->allPostVars as $key => $value) {
-      $value = htmlspecialchars($value);
-        $key = htmlspecialchars($key);
-      $newInputsArray[$key] = $value;
-    }
+    if(isset($_POST['formFields'])){
+
+      $newInputsArray = $_POST['formFields'];
+      $input = json_decode($newInputsArray);
 
 
-      $this->emailSend($this->modx, $newInputsArray);
+
+
+      $finalInput = "";
+      foreach((array)$input as $key => $value){
+        $value = json_decode(json_encode($value), True);
+        $finalInput .= "<h4>".$value['name']."</h4>"."<p>".$value['value']."</p>";
+      }
+    
+      $this->emailSend($this->modx, $finalInput);
+      unset($_POST['formFields']);
+    };
+
+
       // $this->writeToExcel($validatedInputs);
   }
 

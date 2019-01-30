@@ -3,8 +3,9 @@
 
 #add main exclude file and include if you need subfolder to be included in git
 public/*
-!/public/build/*
 !/public/core/*
+!/public/build/*
+
 
 #exclude again and include the subfolder you want do it only by one level
 /public/core/*

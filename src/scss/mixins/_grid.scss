@@ -11,10 +11,6 @@
   }
 }
 
-body {
-  @include debug_baseline();
-}
-
 .wrap {
   @include padding-trailer(2);
   @include padding-trailer(2);

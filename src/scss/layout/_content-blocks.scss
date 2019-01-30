@@ -1,9 +1,12 @@
-$padding-sm: 2;
-$padding-md: 3;
-$padding-lg: 4;
+$padding-sm: 1;
+$padding-md: 2;
+$padding-lg: 3;
 $alternate-color: theme-color("primary");
 
 .content-blocks {
+  &:empty {
+    display: none;
+  }
   @include padding-leader($padding-sm);
   @include padding-trailer($padding-sm);
   // MEDIUM MQ
@@ -23,6 +26,9 @@ $alternate-color: theme-color("primary");
 }
 
 .content-blocks--alternate {
+  &:empty {
+    display: none;
+  }
   @include padding-leader($padding-sm);
   @include padding-trailer($padding-sm);
   // MEDIUM MQ
@@ -32,7 +38,7 @@ $alternate-color: theme-color("primary");
   }
   // LARGE MQ
   @include media-breakpoint-up("lg") {
-    @include padding-leader($padding-lg);
+    @include padding-leader($padding-lg + 1);
     @include padding-trailer($padding-lg);
   }
   background-color: $alternate-color;
@@ -40,6 +46,11 @@ $alternate-color: theme-color("primary");
 
   * {
     color: white;
+  }
+
+  a {
+    color: white;
+    transition: all 0.25s linear;
   }
 }
 

@@ -10,11 +10,14 @@ import objectFitImages from 'object-fit-images';
 
 //custom components imports
 import slideNav from './js/slideNav.js';
+import formStep from './js/formStep.js';
 
 ready(function(){
   objectFitImages();
 
   new slideNav();
+
+  new formStep();
 });
 
 

@@ -5,15 +5,16 @@
     <h2 class="summary-card__grid-title">[[*tvEventsHeading]]</h2>
     <div class="summary-card__grid">
 
-      [[pdoResources?
+      [[!pdoResources?
         &parents=`[[*id]]`
         &tpl=`tplSummaryCard`
         &tvPrefix=``
-        &includeTVs=`tvSummaryCardDescription,tvSummaryCardHeading,tvSummaryCardImage`
-        &processTVs=`tvSummaryCardImage`
+        &includeTVs=`tvSummaryCardDescription,tvSummaryCardHeading,tvSummaryCardImage,tvBannerBgImage`
+        &processTVs=`tvSummaryCardImage,tvBannerBgImage`
         &includeContent=`0`
         &limit=`0`
         &depth=`0`
+        &sortby=`{"menuindex":"ASC"}`
       ]]
 
     </div>

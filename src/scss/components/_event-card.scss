@@ -95,6 +95,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  // SMALL MQ
+  @include media-breakpoint-up("sm") {
+    @include padding-trailer(1);
+  }
 }
 
 .event-card__combined-heading {

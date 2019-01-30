@@ -19,11 +19,14 @@ $theme-colors: (
   "tertiary":   $blue--lighter,
   "success":    green,
   "info":       skyblue,
-  "warning":    yellow,
+  "warning":    #FF8C00,
   "danger":     $red,
   "light":      white,
   "dark":       $black
 );
+
+//base line height
+$blh: 16px;
 
 
 //brand colors

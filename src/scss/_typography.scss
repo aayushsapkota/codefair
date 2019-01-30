@@ -29,6 +29,10 @@ h5 {
   @include base-base(18px, $hff, 0.5, $lines: 1.5);
 }
 
+p {
+  @include base-base(18px, $dff, 2, $lines: 2);
+}
+
 
 // SMALL MQ
 @include media-breakpoint-up('sm') {
@@ -67,7 +71,7 @@ h5 {
 
 .rte{
   p {
-    @include base-base(16px, $dff, 2, $lines: 1.5);
+    @include base-base(18px, $dff, 2, $lines: 2);
   }
 
   a {
@@ -89,7 +93,7 @@ h5 {
     padding-left: 0;
 
     li {
-      @include base-base(16px, $hff, 0.5, $lines: 1.5);
+      @include base-base(18px, $hff, 1, $lines: 2);
       ul,
       ol {
         padding-top: 0;
@@ -113,6 +117,7 @@ h5 {
     padding-left: 20px;
     li {
       padding-left: 0px;
+      list-style-type: decimal;
       &::before {
         padding-right: 12px;
 

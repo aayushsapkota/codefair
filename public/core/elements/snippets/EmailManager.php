@@ -33,24 +33,32 @@ class emailManager {
     try {
       $client = new PostmarkClient($token);
 
-      $sitename = $this->modx->getOption('site_name');
+      // $sitelogo = $this->modx->getOption('site_logo');
       if(!empty($this->body)) {
-        $this->body = print_r($this->body, true);
+        $sitename = $this->modx->getOption('site_name');
+        $contactPageId = $this->modx->getOption('contact_page');
+        $contactPage = $this->modx->getObject('modResource', 26);
+        $subject = $contactPage->getTVValue('tvFormSubject');
 
-      }
-      $properties = array('site_name' => $sitename,
-                          'message' => $this->body);
-      $emailTpl = $this->modx->getChunk('emailTpl', $properties);
-      // Send an email:
-      $sendResult = $client->sendEmail(
-        "no-reply@activeinc.com.au",
-        $sendToEmail,
-        "Codefair Form Details",
-        $emailTpl
-      );
-      return true;
-    } catch(Exception $e){
+        $properties = array('site_name' => $sitename,
+        'message' => $this->body);
+        // $properties = array('site_name' => $sitename,
+        // 'message' => $this->body, 'image_logo' => $sitelogo);
+        $emailTpl = $this->modx->getChunk('emailTpl', $properties);
+        // Send an email:
+        $sendResult = $client->sendEmail(
+          "no-reply@activeinc.com.au",
+          $sendToEmail,
+          $subject,
+          $emailTpl
+        );
+        return true;
+      }else {
         $this->modx->log(modX::LOG_LEVEL_ERROR, $e->message);
+        return false;
+      }
+    } catch(Exception $e){
+      $this->modx->log(modX::LOG_LEVEL_ERROR, $e->message);
       return false;
     }
   }

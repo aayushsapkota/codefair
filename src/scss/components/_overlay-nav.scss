@@ -16,7 +16,7 @@
   }
 
   .breadcrumb {
-    width: calc(100% - 145px);
+    width: auto;
     margin: 0;
     padding: 0;
     margin-left: 24px;
@@ -64,6 +64,17 @@
         }
       }
     }
+  }
+}
+
+.overlay-nav__icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  a {
+    color: theme-color(primary);
   }
 }
 

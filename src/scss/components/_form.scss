@@ -1,16 +1,14 @@
-
 .form {
-  @include padding-leader(1);
   @include padding-trailer(1);
 
   .btn {
-    @include margin-leader(3);
+    @include margin-leader(2);
     width: auto;
     max-width: 200px;
   }
 }
 
-.form__title{
+.form__title {
   @include base-base(28px, $hff, 1, 0);
 }
 
@@ -18,12 +16,16 @@
   @extend .wrap;
 }
 
-.form--inline{
+.form--inline {
   display: inline-block;
 }
 
 .btn +.form--card {
   margin-left: 12px;
+}
+
+.form-group {
+  @include padding-trailer(1);
 }
 
 .form__label {
@@ -67,10 +69,29 @@
 
   &:valid {
     border-bottom: 3px solid theme-color(success);
+
+    &~ .form-error {
+      display: none;
+    }
   }
 }
 
-.form__input--inline{
+.form__radio-group {
+  label {
+    padding-left: 24px;
+    position: relative;
+
+    input[type=radio] {
+      position: absolute;
+      top: 21px;
+      left: 0;
+      width: 16px;
+      font-size: 16px;
+    }
+  }
+}
+
+.form__input--inline {
   display: inline-block;
   width: auto;
 }
@@ -89,8 +110,8 @@
   display: inline-block;
   width: auto;
   @include base-base(14px, $hff, 0);
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
   max-width: 800px;
   border: 0;
 }
@@ -110,11 +131,14 @@
   width: auto;
 }
 
-.form__error {
-  background-color: theme-color(danger);
-  font-size: 16px;
-  font-family: $dff;
-  color: white;
+.form-error {
+  @include base-base(16px, $dff, 0.5, 0);
+  padding-top: 0;
+  color: theme-color(warning);
+}
+
+.form-error__hidden {
+  display: none;
 }
 
 .form__flash {
