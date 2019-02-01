@@ -13,7 +13,7 @@ var entry = PRODUCTION ? ['./src/main.js'] :
   ];
 
 var plugins = PRODUCTION ? [
-    new UglifyJSPlugin(),
+    // new UglifyJSPlugin(),
     new ExtractTextPlugin({
       filename: 'main.bundle.css'
     })

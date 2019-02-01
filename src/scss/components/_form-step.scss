@@ -96,6 +96,23 @@
   background-color: theme-color(tertiary);
 }
 
+.form-step__confirmation-table {
+  tr {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+  td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    &:first-child {
+      font-weight: 500;
+    }
+    &:nth-child(2n) {
+      padding-left: 32px;
+    }
+  }
+}
+
 
 .form-step--hidden {
   display: none;

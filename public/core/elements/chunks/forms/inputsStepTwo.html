@@ -1,54 +1,65 @@
 [[-Checkbox==5 getImageList for these -]]
 
 [[+step:is=`2`:then=`
-  [[+type:is=`1`:then=`
-  <div class="form-group">
-    <label for="input_[[+idx]]" class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
-    <input type="text" value="" placeholder="[[+placeholderText]]" [[+required]] class="form__input" >
-    <p class="form-error form-error__hidden">This field is required</p>
-  </div>
-  `]]
-
-  [[+type:is=`2`:then=`
-  <div class="form-group">
-    <label for="input_[[+idx]]" class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
-    <input type="email" value="" placeholder="[[+placeholderText]]" class="form__input" [[+required]]>
+[[+type:is=`1`:then=`
+<div class="form-group">
+  <label for="input_[[+idx]]" class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
+  <input type="text" value="" placeholder="[[+placeholderText]]" [[+required]] class="form__input" >
   <p class="form-error form-error__hidden">This field is required</p>
+</div>
+`]]
 
-  </div>
-  `]]
+[[+type:is=`2`:then=`
+<div class="form-group">
+  <label for="input_[[+idx]]" class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
+  <input type="email" value="" placeholder="[[+placeholderText]]" class="form__input" [[+required]]>
+<p class="form-error form-error__hidden">This field is required</p>
 
-  [[+type:is=`3`:then=`
-  <div class="form-group">
-    <label for="input_[[+idx]]" class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
-    <input type="tel" value="" class="form__input" [[+required]]>
-  <p class="form-error form-error__hidden">This field is required</p>
+</div>
+`]]
 
-  </div>`]]
+[[+type:is=`3`:then=`
+<div class="form-group">
+  <label class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
+  <input type="tel" value="" class="form__input" [[+required]]>
+<p class="form-error form-error__hidden">This field is required</p>
 
-  [[+type:is=`4`:then=`
-  <div class="form-group form__radio-group">
-    [[+label:notempty=`<h5>[[+label]][[+required:is=`Required`:then=`*`]]</h5>`]]
-    [[!radioInput?
-        &placeholder=`[[+options]]`
-        &name=`input_[[+idx]]`
-    ]]
-  </div>
-  `]]
+</div>`]]
 
-  [[+type:is=`5`:then=`
-  <div class="form-group">
-    <label for="input_[[+idx]]" class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
-    <input type="date" value="" class="form__input" [[+required]]>
-  <p class="form-error form-error__hidden">This field is required</p>
-  </div>
-  `]]
+[[+type:is=`4`:then=`
+<div class="form-group form__radio-group">
+  [[+label:notempty=`<h5>[[+label]][[+required:is=`Required`:then=`*`]]</h5>`]]
+  [[!radioInput?
+      &placeholder=`[[+options]]`
+      &name=`input_[[+idx]]`
+  ]]
+</div>
+`]]
 
-  [[+type:is=`7`:then=`
-  <hr>
-  `]]
+[[+type:is=`5`:then=`
+<div class="form-group">
+  <label for="input_[[+idx]]" class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
+  <input type="date" value="" class="form__input" [[+required]]>
+<p class="form-error form-error__hidden">This field is required</p>
+</div>
+`]]
 
-  [[+type:is=`8`:then=`
-    <h4>[[+label]]</h4>
-  `]]
+[[+type:is=`6`:then=`
+<div class="form-group form-group--select">
+[[+label:notempty=`<h5>[[+label]][[+required:is=`Required`:then=`*`]]</h5>`]]
+<select class="form__select">
+  [[!selectInput?
+    &placeholder=`[[+options]]`
+  ]]
+</select>
+</div>
+`]]
+
+[[+type:is=`7`:then=`
+<hr>
+`]]
+
+[[+type:is=`8`:then=`
+  <h4>[[+label]]</h4>
+`]]
 `]]

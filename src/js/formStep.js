@@ -123,26 +123,28 @@ module.exports = class Slidenav {
 
       for (var j = 0; j < navItems.length; j++) {
         navItems[j].addEventListener('click', (event) => {
-          var navText = event.target.textContent;
+          if (obj.validateActiveStep(obj, steps) == true) {
+            var navText = event.target.textContent;
 
-          for (var k = 0; k < allSteps.length; k++) {
-            navItems[k].classList.remove(obj.stepNavItemActiveClass);
-            var stepName = allSteps[k].dataset.name;
-            var tempActive = obj.activeStep;
+            for (var k = 0; k < allSteps.length; k++) {
+              navItems[k].classList.remove(obj.stepNavItemActiveClass);
+              var stepName = allSteps[k].dataset.name;
+              var tempActive = obj.activeStep;
 
-            if (navText != stepName) {
-              allSteps[k].classList.add(obj.hiddenClass);
-            } else if (navText == stepName) {
-              allSteps[k].classList.remove(obj.hiddenClass);
-              obj.activeStep = k + 1;
+              if (navText != stepName) {
+                allSteps[k].classList.add(obj.hiddenClass);
+              } else if (navText == stepName) {
+                allSteps[k].classList.remove(obj.hiddenClass);
+                obj.activeStep = k + 1;
+              }
             }
-          }
 
-          // console.log(stepName);
-          event.target.classList.add(obj.stepNavItemActiveClass);
-          console.log(obj.activeStep);
+            // console.log(stepName);
+            event.target.classList.add(obj.stepNavItemActiveClass);
+            console.log(obj.activeStep);
 
             obj.showAllDetails(obj,form);
+          }
         });
 
       }
@@ -179,11 +181,41 @@ module.exports = class Slidenav {
 
     var fields = [];
     for (var m = 0; m < allFieldsWrap.length; m++) {
-      var name = allFieldsWrap[m].querySelector("label").textContent;
-      var fieldText = allFieldsWrap[m].querySelector("input").textContent;
-      var fieldValue = allFieldsWrap[m].querySelector("input").value;
 
-      var value = "";
+      var name,  value, fieldText, fieldValue = "";
+
+      //deal with the edge case
+      if(allFieldsWrap[m].classList.contains("form-group--select") || allFieldsWrap[m].classList.contains("form__radio-group")){
+        name = allFieldsWrap[m].querySelector("h5").textContent;
+      } else
+      if(allFieldsWrap[m].querySelector("label")){
+        console.log(allFieldsWrap[m].querySelector("label"));
+        name = allFieldsWrap[m].querySelector("label").textContent;
+      }
+
+      if(allFieldsWrap[m].querySelector("input")){
+        fieldText = allFieldsWrap[m].querySelector("input").textContent;
+      }
+
+      if(allFieldsWrap[m].querySelector("input")){
+        fieldValue = allFieldsWrap[m].querySelector("input").value;
+      }
+
+
+      if(allFieldsWrap[m].classList.contains("form__radio-group")) {
+        var inputs = allFieldsWrap[m].querySelectorAll("input");
+        value = "";
+        for(var o = 0; o <inputs.length; o++){
+          if(inputs[o].checked == true) {
+            value = inputs[o].value;
+          }
+        }
+      } else
+
+      if(allFieldsWrap[m].classList.contains("form-group--select")) {
+        var inputSelect = allFieldsWrap[m].querySelector("select");
+        value = inputSelect.value;
+      } else
       if (fieldText == "" || typeof fieldText == undefined) {
         value = fieldValue;
       } else
@@ -205,18 +237,18 @@ module.exports = class Slidenav {
     if(obj.activeStep == 4) {
       var formDetails = obj.getAllDetails(obj, form);
 
-        var table = form.querySelector("."+obj.confirmationTableClass);
-        // console.log(table);
+      var table = form.querySelector("."+obj.confirmationTableClass);
+      // console.log(table);
 
-          table.innerHTML = "";
-        for(var n = 0; n < formDetails.length; n++) {
+      table.innerHTML = "";
+      for(var n = 0; n < formDetails.length; n++) {
 
-          var tr = document.createElement('tr');
-          var td1 = formDetails[n].name;
-          var td2 = formDetails[n].value;
-          tr.innerHTML = `<td>${td1}</td> <td>${td2}</td>`;
-          table.appendChild(tr);
-        }
+        var tr = document.createElement('tr');
+        var td1 = formDetails[n].name;
+        var td2 = formDetails[n].value;
+        tr.innerHTML = `<td>${td1}</td> <td>${td2}</td>`;
+        table.appendChild(tr);
+      }
 
 
     }
@@ -224,11 +256,22 @@ module.exports = class Slidenav {
 
   submitDetails(obj, form){
     var formDetails = obj.getAllDetails(obj,form);
+    var inputToSave =  document.createElement('input');
+    inputToSave.type = "hidden";
+    inputToSave.name = "fieldSave";
+    // inputToSave.value = formDetails.join();
+    for(var i = 0; i < formDetails.length; i++) {
+      inputToSave.value += formDetails[i].name +": "+ formDetails[i].value + ", ";
+    }
+    // console.log(inputToSave);
+    form.appendChild(inputToSave);
+
+
     var inputToSubmit = document.createElement('input');
     inputToSubmit.type = "hidden";
     inputToSubmit.name = "formFields";
     inputToSubmit.value = JSON.stringify(formDetails);
-    console.log(inputToSubmit);
+    // console.log(inputToSubmit);
     form.appendChild(inputToSubmit);
     form.submit();
   }

@@ -1,1 +1,868 @@
-!function(e){var t={};function s(n){if(t[n])return t[n].exports;var i=t[n]={i:n,l:!1,exports:{}};return e[n].call(i.exports,i,i.exports,s),i.l=!0,i.exports}s.m=e,s.c=t,s.d=function(e,t,n){s.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:n})},s.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return s.d(t,"a",t),t},s.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},s.p="/public/build/",s(s.s=0)}([function(e,t,s){e.exports=s(1)},function(e,t,s){"use strict";s(2),s(3),s(4),s(5);var n,i=o(s(6)),a=o(s(7)),r=o(s(8));function o(e){return e&&e.__esModule?e:{default:e}}s(9),n=function(){(0,i.default)(),new a.default,new r.default},"loading"!=document.readyState?n():document.addEventListener?document.addEventListener("DOMContentLoaded",n):document.attachEvent("onreadystatechange",function(){"complete"==document.readyState&&n()})},function(e,t,s){e.exports=s.p+"fonts/icons.eot"},function(e,t,s){e.exports=s.p+"fonts/icons.svg"},function(e,t,s){e.exports=s.p+"fonts/icons.ttf"},function(e,t,s){e.exports=s.p+"fonts/icons.woff"},function(e,t,s){"use strict";var n="bfred-it:object-fit-images",i=/(object-fit|object-position)\s*:\s*([-\w\s%]+)/g,a="undefined"==typeof Image?{style:{"object-position":1}}:new Image,r="object-fit"in a.style,o="object-position"in a.style,l="background-size"in a.style,c="string"==typeof a.currentSrc,u=a.getAttribute,v=a.setAttribute,d=!1;function f(e,t,s){var n="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='"+(t||1)+"' height='"+(s||0)+"'%3E%3C/svg%3E";u.call(e,"src")!==n&&v.call(e,"src",n)}function p(e,t){e.naturalWidth?t(e):setTimeout(p,100,e,t)}function m(e){var t=function(e){for(var t,s=getComputedStyle(e).fontFamily,n={};null!==(t=i.exec(s));)n[t[1]]=t[2];return n}(e),s=e[n];if(t["object-fit"]=t["object-fit"]||"fill",!s.img){if("fill"===t["object-fit"])return;if(!s.skipTest&&r&&!t["object-position"])return}if(!s.img){s.img=new Image(e.width,e.height),s.img.srcset=u.call(e,"data-ofi-srcset")||e.srcset,s.img.src=u.call(e,"data-ofi-src")||e.src,v.call(e,"data-ofi-src",e.src),e.srcset&&v.call(e,"data-ofi-srcset",e.srcset),f(e,e.naturalWidth||e.width,e.naturalHeight||e.height),e.srcset&&(e.srcset="");try{!function(e){var t={get:function(t){return e[n].img[t||"src"]},set:function(t,s){return e[n].img[s||"src"]=t,v.call(e,"data-ofi-"+s,t),m(e),t}};Object.defineProperty(e,"src",t),Object.defineProperty(e,"currentSrc",{get:function(){return t.get("currentSrc")}}),Object.defineProperty(e,"srcset",{get:function(){return t.get("srcset")},set:function(e){return t.set(e,"srcset")}})}(e)}catch(e){window.console&&console.warn("https://bit.ly/ofi-old-browser")}}!function(e){if(e.srcset&&!c&&window.picturefill){var t=window.picturefill._;e[t.ns]&&e[t.ns].evaled||t.fillImg(e,{reselect:!0}),e[t.ns].curSrc||(e[t.ns].supported=!1,t.fillImg(e,{reselect:!0})),e.currentSrc=e[t.ns].curSrc||e.src}}(s.img),e.style.backgroundImage='url("'+(s.img.currentSrc||s.img.src).replace(/"/g,'\\"')+'")',e.style.backgroundPosition=t["object-position"]||"center",e.style.backgroundRepeat="no-repeat",e.style.backgroundOrigin="content-box",/scale-down/.test(t["object-fit"])?p(s.img,function(){s.img.naturalWidth>e.width||s.img.naturalHeight>e.height?e.style.backgroundSize="contain":e.style.backgroundSize="auto"}):e.style.backgroundSize=t["object-fit"].replace("none","auto").replace("fill","100% 100%"),p(s.img,function(t){f(e,t.naturalWidth,t.naturalHeight)})}function g(e,t){var s=!d&&!e;if(t=t||{},e=e||"img",o&&!t.skipTest||!l)return!1;"img"===e?e=document.getElementsByTagName("img"):"string"==typeof e?e=document.querySelectorAll(e):"length"in e||(e=[e]);for(var i=0;i<e.length;i++)e[i][n]=e[i][n]||{skipTest:t.skipTest},m(e[i]);s&&(document.body.addEventListener("load",function(e){"IMG"===e.target.tagName&&g(e.target,{skipTest:t.skipTest})},!0),d=!0,e="img"),t.watchMQ&&window.addEventListener("resize",g.bind(null,e,{skipTest:t.skipTest}))}g.supportsObjectFit=r,g.supportsObjectPosition=o,function(){function e(e,t){return e[n]&&e[n].img&&("src"===t||"srcset"===t)?e[n].img:e}o||(HTMLImageElement.prototype.getAttribute=function(t){return u.call(e(this,t),t)},HTMLImageElement.prototype.setAttribute=function(t,s){return v.call(e(this,t),t,String(s))})}(),e.exports=g},function(e,t,s){"use strict";var n=function(){function e(e,t){for(var s=0;s<t.length;s++){var n=t[s];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,s,n){return s&&e(t.prototype,s),n&&e(t,n),t}}();e.exports=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e);var s=Object.assign({slideNavClass:"slide-nav",slideNavInnerListClass:"slide-nav__inner-list",slideNavActiveClass:"slide-nav--active",slideNavOverlayClass:"slide-nav__overlay",slideNavBtnCloseClass:"slide-nav__close",overlayNavClass:"overlay-nav",overlayNavClassActive:"overlay-nav--active",overlayNavOpenBtnClass:"overlay-nav__button",showChildNavButtonClass:"slide-nav__show-children"},t);for(var n in s)s.hasOwnProperty(n)&&(this[n]=s[n]);this.makeOverlayNavActive(this),this.toggleSlideNav(this),this.addSubNavigationShowButton(this),this.showHideSubNavItems(this)}return n(e,[{key:"addSubNavigationShowButton",value:function(e){var t=document.querySelectorAll("."+e.slideNavInnerListClass);if(t)for(var s=0;s<t.length;s++){var n=t[s].parentNode,i=document.createElement("div");i.classList.add(e.showChildNavButtonClass),i.setAttribute("tabindex","0"),n.appendChild(i)}}},{key:"showHideSubNavItems",value:function(e){document.addEventListener("click",function(t){var s=t.target;if(s.classList.contains(e.showChildNavButtonClass)){var n=s.parentNode.querySelector("."+e.slideNavInnerListClass);n.classList.contains("open")?n.classList.remove("open"):n.classList.add("open")}})}},{key:"makeOverlayNavActive",value:function(e){window.addEventListener("scroll",function(t){var s=window.scrollY,n=document.querySelector("."+e.overlayNavClass);void 0!==s&&s>32&&!n.classList.contains(e.overlayNavClassActive)?n.classList.add(e.overlayNavClassActive):s<32&&n.classList.contains(e.overlayNavClassActive)&&n.classList.remove(e.overlayNavClassActive)})}},{key:"toggleSlideNav",value:function(e){var t=document.querySelector("."+e.overlayNavOpenBtnClass),s=document.querySelector("."+e.slideNavClass);t.addEventListener("click",function(t){s.classList.contains(e.slideNavActiveClass)?s.classList.remove(e.slideNavActiveClass):s.classList.add(e.slideNavActiveClass)}),document.addEventListener("click",function(t){var n=t.target;n.classList.contains(e.slideNavOverlayClass)&&s.classList.remove(e.slideNavActiveClass),n.classList.contains(e.slideNavBtnCloseClass)&&s.classList.remove(e.slideNavActiveClass),n.classList.contains(e.overlayNavClass)&&s.classList.remove(e.slideNavActiveClass)})}}]),e}()},function(e,t,s){"use strict";var n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},i=function(){function e(e,t){for(var s=0;s<t.length;s++){var n=t[s];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,s,n){return s&&e(t.prototype,s),n&&e(t,n),t}}();e.exports=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e);var s=Object.assign({formClass:"form-step",hiddenClass:"form-step--hidden",nextStepButtonClass:"form-step__next",prevStepButtonClass:"form-step__previous",lastStepNextBtnClass:"form-step__next--last",stepsNavClass:"form-step__next--last",stepsNavItemClass:"form-step__step-btn",stepNavItemActiveClass:"form-step__item--active",activeStep:1,formErrorHiddenClass:"form-error__hidden",confirmationTableClass:"form-step__confirmation-table",formSubmitButtonClass:"form-step__btn-submit"},t);for(var n in s)s.hasOwnProperty(n)&&(this[n]=s[n]);this.setup(this)}return i(e,[{key:"setup",value:function(e){var t=document.querySelector("."+e.formClass);if(t){var s=t.querySelectorAll("fieldset");s.length;if(s){for(var n=0;n<s.length;n++)s[n].dataset.step!=e.activeStep&&s[n].classList.add(e.hiddenClass);var i=e.getNextStepBtns(e),a=e.getNavItems(e),r=e.getPreviousStepBtns(e);this.nextStep(this,i,s,t),this.previousStep(this,r,a),a[0].classList.add(e.stepNavItemActiveClass),this.navigateSteps(this,a,s,t),e.formSubmit(e,t)}}}},{key:"nextStep",value:function(e,t,s,n){var i=e.getNavItems(e);if(t)for(var a=0;a<t.length;a++)t[a].addEventListener("click",function(t){if(1==e.validateActiveStep(e,s)){var a=t.target.parentNode,r=a.nextElementSibling||a.nextSibling;a.classList.add(e.hiddenClass),i[e.activeStep-1].classList.remove(e.stepNavItemActiveClass),r.classList.remove(e.hiddenClass),i[e.activeStep].classList.add(e.stepNavItemActiveClass),e.activeStep=e.activeStep+1,console.log(e.activeStep),e.showAllDetails(e,n)}else console.log("Show Validation Errors")})}},{key:"previousStep",value:function(e,t,s){if(t)for(var n=0;n<t.length;n++)t[n].addEventListener("click",function(t){var n=t.target.parentNode,i=n.previousElementSibling||n.previousSibling;n.classList.add(e.hiddenClass),s[e.activeStep-1].classList.remove(e.stepNavItemActiveClass),i.classList.remove(e.hiddenClass),s[e.activeStep-2].classList.add(e.stepNavItemActiveClass),e.activeStep=e.activeStep-1,console.log(e.activeStep)})}},{key:"navigateSteps",value:function(e,t,s,n){if(t)for(var i=s,a=0;a<t.length;a++)t[a].addEventListener("click",function(s){for(var a=s.target.textContent,r=0;r<i.length;r++){t[r].classList.remove(e.stepNavItemActiveClass);var o=i[r].dataset.name;e.activeStep;a!=o?i[r].classList.add(e.hiddenClass):a==o&&(i[r].classList.remove(e.hiddenClass),e.activeStep=r+1)}s.target.classList.add(e.stepNavItemActiveClass),console.log(e.activeStep),e.showAllDetails(e,n)})}},{key:"validateActiveStep",value:function(e,t){var s=t[e.activeStep-1];console.log(s);for(var n=s.querySelectorAll("input"),i=0;i<n.length;i++){if(""===n[i].value&&n[i].hasAttribute("required")&&("text"==n[i].type||"email"==n[i].type))return e.getNextSibling(n[i]).classList.remove(e.formErrorHiddenClass),!1}return!0}},{key:"getAllDetails",value:function(e,t){var s=t.querySelectorAll(".form-group");console.log(s);for(var i=[],a=0;a<s.length;a++){var r=s[a].querySelector("label").textContent,o=s[a].querySelector("input").textContent,l=s[a].querySelector("input").value,c="";""==o||void 0==(void 0===o?"undefined":n(o))?c=l:""!=o&&(c=o);var u={name:r,value:c};i.push(u)}return i}},{key:"showAllDetails",value:function(e,t){if(4==e.activeStep){var s=e.getAllDetails(e,t),n=t.querySelector("."+e.confirmationTableClass);n.innerHTML="";for(var i=0;i<s.length;i++){var a=document.createElement("tr"),r=s[i].name,o=s[i].value;a.innerHTML="<td>"+r+"</td> <td>"+o+"</td>",n.appendChild(a)}}}},{key:"submitDetails",value:function(e,t){var s=e.getAllDetails(e,t),n=document.createElement("input");n.type="hidden",n.name="formFields",n.value=JSON.stringify(s),console.log(n),t.appendChild(n),t.submit()}},{key:"formSubmit",value:function(e,t){e.getSubmitBtn(e).addEventListener("click",function(s){s.preventDefault(),e.submitDetails(e,t)})}},{key:"getNextSibling",value:function(e){return e.nextElementSibling||e.nextSibling}},{key:"getPreviousSibling",value:function(e){return e.previousElementSibling||e.previousSibling}},{key:"getNavItems",value:function(e){return document.querySelectorAll("."+e.stepsNavItemClass)}},{key:"getNextStepBtns",value:function(e){return document.querySelectorAll("."+e.nextStepButtonClass)}},{key:"getPreviousStepBtns",value:function(e){return document.querySelectorAll("."+e.prevStepButtonClass)}},{key:"getLastNextStepBtn",value:function(e){return document.querySelector("."+e.lastStepNextBtnClass)}},{key:"getSubmitBtn",value:function(e){return document.querySelector("."+e.formSubmitButtonClass)}}]),e}()},function(e,t){}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/public/build/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(1);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(2);
+
+__webpack_require__(3);
+
+__webpack_require__(4);
+
+__webpack_require__(5);
+
+var _objectFitImages = __webpack_require__(6);
+
+var _objectFitImages2 = _interopRequireDefault(_objectFitImages);
+
+var _slideNav = __webpack_require__(7);
+
+var _slideNav2 = _interopRequireDefault(_slideNav);
+
+var _formStep = __webpack_require__(8);
+
+var _formStep2 = _interopRequireDefault(_formStep);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//style imports for build system
+__webpack_require__(9);
+
+//libs import
+
+
+//custom components imports
+
+
+ready(function () {
+  (0, _objectFitImages2.default)();
+
+  new _slideNav2.default();
+
+  new _formStep2.default();
+});
+
+//other helper functions
+function ready(callback) {
+  // in case the document is already rendered
+  if (document.readyState != 'loading') callback();
+  // modern browsers
+  else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+    // IE <= 8
+    else document.attachEvent('onreadystatechange', function () {
+        if (document.readyState == 'complete') callback();
+      });
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fonts/icons.eot";
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fonts/icons.svg";
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fonts/icons.ttf";
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fonts/icons.woff";
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*! npm.im/object-fit-images 3.2.3 */
+
+
+var OFI = 'bfred-it:object-fit-images';
+var propRegex = /(object-fit|object-position)\s*:\s*([-\w\s%]+)/g;
+var testImg = typeof Image === 'undefined' ? { style: { 'object-position': 1 } } : new Image();
+var supportsObjectFit = 'object-fit' in testImg.style;
+var supportsObjectPosition = 'object-position' in testImg.style;
+var supportsOFI = 'background-size' in testImg.style;
+var supportsCurrentSrc = typeof testImg.currentSrc === 'string';
+var nativeGetAttribute = testImg.getAttribute;
+var nativeSetAttribute = testImg.setAttribute;
+var autoModeEnabled = false;
+
+function createPlaceholder(w, h) {
+	return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'%3E%3C/svg%3E";
+}
+
+function polyfillCurrentSrc(el) {
+	if (el.srcset && !supportsCurrentSrc && window.picturefill) {
+		var pf = window.picturefill._;
+		// parse srcset with picturefill where currentSrc isn't available
+		if (!el[pf.ns] || !el[pf.ns].evaled) {
+			// force synchronous srcset parsing
+			pf.fillImg(el, { reselect: true });
+		}
+
+		if (!el[pf.ns].curSrc) {
+			// force picturefill to parse srcset
+			el[pf.ns].supported = false;
+			pf.fillImg(el, { reselect: true });
+		}
+
+		// retrieve parsed currentSrc, if any
+		el.currentSrc = el[pf.ns].curSrc || el.src;
+	}
+}
+
+function getStyle(el) {
+	var style = getComputedStyle(el).fontFamily;
+	var parsed;
+	var props = {};
+	while ((parsed = propRegex.exec(style)) !== null) {
+		props[parsed[1]] = parsed[2];
+	}
+	return props;
+}
+
+function setPlaceholder(img, width, height) {
+	// Default: fill width, no height
+	var placeholder = createPlaceholder(width || 1, height || 0);
+
+	// Only set placeholder if it's different
+	if (nativeGetAttribute.call(img, 'src') !== placeholder) {
+		nativeSetAttribute.call(img, 'src', placeholder);
+	}
+}
+
+function onImageReady(img, callback) {
+	// naturalWidth is only available when the image headers are loaded,
+	// this loop will poll it every 100ms.
+	if (img.naturalWidth) {
+		callback(img);
+	} else {
+		setTimeout(onImageReady, 100, img, callback);
+	}
+}
+
+function fixOne(el) {
+	var style = getStyle(el);
+	var ofi = el[OFI];
+	style['object-fit'] = style['object-fit'] || 'fill'; // default value
+
+	// Avoid running where unnecessary, unless OFI had already done its deed
+	if (!ofi.img) {
+		// fill is the default behavior so no action is necessary
+		if (style['object-fit'] === 'fill') {
+			return;
+		}
+
+		// Where object-fit is supported and object-position isn't (Safari < 10)
+		if (!ofi.skipTest && // unless user wants to apply regardless of browser support
+		supportsObjectFit && // if browser already supports object-fit
+		!style['object-position'] // unless object-position is used
+		) {
+				return;
+			}
+	}
+
+	// keep a clone in memory while resetting the original to a blank
+	if (!ofi.img) {
+		ofi.img = new Image(el.width, el.height);
+		ofi.img.srcset = nativeGetAttribute.call(el, "data-ofi-srcset") || el.srcset;
+		ofi.img.src = nativeGetAttribute.call(el, "data-ofi-src") || el.src;
+
+		// preserve for any future cloneNode calls
+		// https://github.com/bfred-it/object-fit-images/issues/53
+		nativeSetAttribute.call(el, "data-ofi-src", el.src);
+		if (el.srcset) {
+			nativeSetAttribute.call(el, "data-ofi-srcset", el.srcset);
+		}
+
+		setPlaceholder(el, el.naturalWidth || el.width, el.naturalHeight || el.height);
+
+		// remove srcset because it overrides src
+		if (el.srcset) {
+			el.srcset = '';
+		}
+		try {
+			keepSrcUsable(el);
+		} catch (err) {
+			if (window.console) {
+				console.warn('https://bit.ly/ofi-old-browser');
+			}
+		}
+	}
+
+	polyfillCurrentSrc(ofi.img);
+
+	el.style.backgroundImage = "url(\"" + (ofi.img.currentSrc || ofi.img.src).replace(/"/g, '\\"') + "\")";
+	el.style.backgroundPosition = style['object-position'] || 'center';
+	el.style.backgroundRepeat = 'no-repeat';
+	el.style.backgroundOrigin = 'content-box';
+
+	if (/scale-down/.test(style['object-fit'])) {
+		onImageReady(ofi.img, function () {
+			if (ofi.img.naturalWidth > el.width || ofi.img.naturalHeight > el.height) {
+				el.style.backgroundSize = 'contain';
+			} else {
+				el.style.backgroundSize = 'auto';
+			}
+		});
+	} else {
+		el.style.backgroundSize = style['object-fit'].replace('none', 'auto').replace('fill', '100% 100%');
+	}
+
+	onImageReady(ofi.img, function (img) {
+		setPlaceholder(el, img.naturalWidth, img.naturalHeight);
+	});
+}
+
+function keepSrcUsable(el) {
+	var descriptors = {
+		get: function get(prop) {
+			return el[OFI].img[prop ? prop : 'src'];
+		},
+		set: function set(value, prop) {
+			el[OFI].img[prop ? prop : 'src'] = value;
+			nativeSetAttribute.call(el, "data-ofi-" + prop, value); // preserve for any future cloneNode
+			fixOne(el);
+			return value;
+		}
+	};
+	Object.defineProperty(el, 'src', descriptors);
+	Object.defineProperty(el, 'currentSrc', {
+		get: function get() {
+			return descriptors.get('currentSrc');
+		}
+	});
+	Object.defineProperty(el, 'srcset', {
+		get: function get() {
+			return descriptors.get('srcset');
+		},
+		set: function set(ss) {
+			return descriptors.set(ss, 'srcset');
+		}
+	});
+}
+
+function hijackAttributes() {
+	function getOfiImageMaybe(el, name) {
+		return el[OFI] && el[OFI].img && (name === 'src' || name === 'srcset') ? el[OFI].img : el;
+	}
+	if (!supportsObjectPosition) {
+		HTMLImageElement.prototype.getAttribute = function (name) {
+			return nativeGetAttribute.call(getOfiImageMaybe(this, name), name);
+		};
+
+		HTMLImageElement.prototype.setAttribute = function (name, value) {
+			return nativeSetAttribute.call(getOfiImageMaybe(this, name), name, String(value));
+		};
+	}
+}
+
+function fix(imgs, opts) {
+	var startAutoMode = !autoModeEnabled && !imgs;
+	opts = opts || {};
+	imgs = imgs || 'img';
+
+	if (supportsObjectPosition && !opts.skipTest || !supportsOFI) {
+		return false;
+	}
+
+	// use imgs as a selector or just select all images
+	if (imgs === 'img') {
+		imgs = document.getElementsByTagName('img');
+	} else if (typeof imgs === 'string') {
+		imgs = document.querySelectorAll(imgs);
+	} else if (!('length' in imgs)) {
+		imgs = [imgs];
+	}
+
+	// apply fix to all
+	for (var i = 0; i < imgs.length; i++) {
+		imgs[i][OFI] = imgs[i][OFI] || {
+			skipTest: opts.skipTest
+		};
+		fixOne(imgs[i]);
+	}
+
+	if (startAutoMode) {
+		document.body.addEventListener('load', function (e) {
+			if (e.target.tagName === 'IMG') {
+				fix(e.target, {
+					skipTest: opts.skipTest
+				});
+			}
+		}, true);
+		autoModeEnabled = true;
+		imgs = 'img'; // reset to a generic selector for watchMQ
+	}
+
+	// if requested, watch media queries for object-fit change
+	if (opts.watchMQ) {
+		window.addEventListener('resize', fix.bind(null, imgs, {
+			skipTest: opts.skipTest
+		}));
+	}
+}
+
+fix.supportsObjectFit = supportsObjectFit;
+fix.supportsObjectPosition = supportsObjectPosition;
+
+hijackAttributes();
+
+module.exports = fix;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+module.exports = function () {
+  function Slidenav(options) {
+    _classCallCheck(this, Slidenav);
+
+    var defaults = {
+      'slideNavClass': 'slide-nav',
+      "slideNavInnerListClass": 'slide-nav__inner-list',
+      'slideNavActiveClass': "slide-nav--active",
+      'slideNavOverlayClass': 'slide-nav__overlay',
+      "slideNavBtnCloseClass": "slide-nav__close",
+      'overlayNavClass': 'overlay-nav',
+      'overlayNavClassActive': 'overlay-nav--active',
+      'overlayNavOpenBtnClass': 'overlay-nav__button',
+      'showChildNavButtonClass': 'slide-nav__show-children'
+    };
+
+    var populated = Object.assign(defaults, options);
+    for (var key in populated) {
+      if (populated.hasOwnProperty(key)) {
+        this[key] = populated[key];
+      }
+    }
+    this.makeOverlayNavActive(this);
+    this.toggleSlideNav(this);
+    this.addSubNavigationShowButton(this);
+    this.showHideSubNavItems(this);
+  }
+
+  _createClass(Slidenav, [{
+    key: 'addSubNavigationShowButton',
+    value: function addSubNavigationShowButton(obj) {
+      var slideNavInnerLists = document.querySelectorAll("." + obj.slideNavInnerListClass);
+      if (slideNavInnerLists) {
+        for (var i = 0; i < slideNavInnerLists.length; i++) {
+          var parentNode = slideNavInnerLists[i].parentNode;
+          var showChildButton = document.createElement("div");
+          showChildButton.classList.add(obj.showChildNavButtonClass);
+          showChildButton.setAttribute("tabindex", "0");
+          parentNode.appendChild(showChildButton);
+        }
+      }
+    }
+  }, {
+    key: 'showHideSubNavItems',
+    value: function showHideSubNavItems(obj) {
+      document.addEventListener("click", function (event) {
+        var target = event.target;
+        if (target.classList.contains(obj.showChildNavButtonClass)) {
+          var wantedListItem = target.parentNode.querySelector("." + obj.slideNavInnerListClass);
+          if (wantedListItem.classList.contains("open")) {
+            wantedListItem.classList.remove("open");
+          } else {
+            wantedListItem.classList.add("open");
+          }
+        }
+      });
+    }
+  }, {
+    key: 'makeOverlayNavActive',
+    value: function makeOverlayNavActive(obj) {
+      window.addEventListener("scroll", function (event) {
+        var distanceScrolled = window.scrollY;
+        var overlayNav = document.querySelector("." + obj.overlayNavClass);
+
+        //check if the primary nav is already hidden
+        if (typeof distanceScrolled != 'undefined' && distanceScrolled > 32 && !overlayNav.classList.contains(obj.overlayNavClassActive)) {
+
+          overlayNav.classList.add(obj.overlayNavClassActive);
+        }
+        //check if the primary nav is not hidden
+        else if (distanceScrolled < 32 && overlayNav.classList.contains(obj.overlayNavClassActive)) {
+
+            overlayNav.classList.remove(obj.overlayNavClassActive);
+          }
+      });
+    }
+  }, {
+    key: 'toggleSlideNav',
+    value: function toggleSlideNav(obj) {
+      var overlayNavOpenBtn = document.querySelector("." + obj.overlayNavOpenBtnClass);
+      var slideNav = document.querySelector("." + obj.slideNavClass);
+      // console.log(overlayNavOpenBtn);
+      overlayNavOpenBtn.addEventListener("click", function (event) {
+        if (slideNav.classList.contains(obj.slideNavActiveClass)) {
+          slideNav.classList.remove(obj.slideNavActiveClass);
+        } else {
+          slideNav.classList.add(obj.slideNavActiveClass);
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        var target = event.target;
+        // console.log(target);
+        //hide slidenav if clicked else where
+        if (target.classList.contains(obj.slideNavOverlayClass)) {
+          slideNav.classList.remove(obj.slideNavActiveClass);
+        }
+        if (target.classList.contains(obj.slideNavBtnCloseClass)) {
+          slideNav.classList.remove(obj.slideNavActiveClass);
+        }
+        if (target.classList.contains(obj.overlayNavClass)) {
+          slideNav.classList.remove(obj.slideNavActiveClass);
+        }
+      });
+    }
+  }]);
+
+  return Slidenav;
+}();
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+module.exports = function () {
+  function Slidenav(options) {
+    _classCallCheck(this, Slidenav);
+
+    var defaults = {
+      "formClass": "form-step",
+      "hiddenClass": "form-step--hidden",
+      "nextStepButtonClass": "form-step__next",
+      "prevStepButtonClass": "form-step__previous",
+      "lastStepNextBtnClass": "form-step__next--last",
+      "stepsNavClass": "form-step__next--last",
+      "stepsNavItemClass": "form-step__step-btn",
+      "stepNavItemActiveClass": "form-step__item--active",
+      "activeStep": 1,
+      "formErrorHiddenClass": "form-error__hidden",
+      "confirmationTableClass": "form-step__confirmation-table",
+      "formSubmitButtonClass": "form-step__btn-submit"
+    };
+
+    var populated = Object.assign(defaults, options);
+    for (var key in populated) {
+      if (populated.hasOwnProperty(key)) {
+        this[key] = populated[key];
+      }
+    }
+
+    this.setup(this);
+  }
+
+  //hide all other form steps
+
+
+  _createClass(Slidenav, [{
+    key: "setup",
+    value: function setup(obj) {
+      var form = document.querySelector("." + obj.formClass);
+      if (form) {
+        var steps = form.querySelectorAll('fieldset');
+        var totalSteps = steps.length;
+
+        if (steps) {
+
+          for (var i = 0; i < steps.length; i++) {
+
+            if (steps[i].dataset.step != obj.activeStep) {
+              steps[i].classList.add(obj.hiddenClass);
+            }
+          }
+
+          var nextStepBtns = obj.getNextStepBtns(obj);
+          var navItems = obj.getNavItems(obj);
+          var previousStepBtns = obj.getPreviousStepBtns(obj);
+
+          //next step functionality
+          this.nextStep(this, nextStepBtns, steps, form);
+
+          //previous step functionality
+          this.previousStep(this, previousStepBtns, navItems);
+
+          //navigation functionality
+          navItems[0].classList.add(obj.stepNavItemActiveClass);
+          this.navigateSteps(this, navItems, steps, form);
+
+          //form submit
+          obj.formSubmit(obj, form);
+        }
+      }
+    }
+  }, {
+    key: "nextStep",
+    value: function nextStep(obj, nextStepBtns, steps, form) {
+      var navStepsBtns = obj.getNavItems(obj);
+      if (nextStepBtns) {
+
+        for (var i = 0; i < nextStepBtns.length; i++) {
+          nextStepBtns[i].addEventListener('click', function (event) {
+
+            if (obj.validateActiveStep(obj, steps) == true) {
+              var wantedStep = event.target.parentNode;
+              var nextStep = wantedStep.nextElementSibling || wantedStep.nextSibling;
+
+              //hide the current tab
+              wantedStep.classList.add(obj.hiddenClass);
+
+              navStepsBtns[obj.activeStep - 1].classList.remove(obj.stepNavItemActiveClass);
+              // //show the next tab
+              nextStep.classList.remove(obj.hiddenClass);
+              navStepsBtns[obj.activeStep].classList.add(obj.stepNavItemActiveClass);
+
+              obj.activeStep = obj.activeStep + 1;
+              console.log(obj.activeStep);
+
+              obj.showAllDetails(obj, form);
+            } else {
+              console.log("Show Validation Errors");
+            }
+          });
+        }
+      }
+    }
+  }, {
+    key: "previousStep",
+    value: function previousStep(obj, previousStepBtns, navItems) {
+
+      if (previousStepBtns) {
+        for (var i = 0; i < previousStepBtns.length; i++) {
+          previousStepBtns[i].addEventListener('click', function (event) {
+            var wantedStep = event.target.parentNode;
+            var prevStep = wantedStep.previousElementSibling || wantedStep.previousSibling;
+            //hide the current tab
+            wantedStep.classList.add(obj.hiddenClass);
+            navItems[obj.activeStep - 1].classList.remove(obj.stepNavItemActiveClass);
+            //show the next tab
+            prevStep.classList.remove(obj.hiddenClass);
+            navItems[obj.activeStep - 2].classList.add(obj.stepNavItemActiveClass);
+
+            obj.activeStep = obj.activeStep - 1;
+            console.log(obj.activeStep);
+          });
+        }
+      }
+    }
+  }, {
+    key: "navigateSteps",
+    value: function navigateSteps(obj, navItems, steps, form) {
+
+      if (navItems) {
+        var allSteps = steps;
+
+        for (var j = 0; j < navItems.length; j++) {
+          navItems[j].addEventListener('click', function (event) {
+            if (obj.validateActiveStep(obj, steps) == true) {
+              var navText = event.target.textContent;
+
+              for (var k = 0; k < allSteps.length; k++) {
+                navItems[k].classList.remove(obj.stepNavItemActiveClass);
+                var stepName = allSteps[k].dataset.name;
+                var tempActive = obj.activeStep;
+
+                if (navText != stepName) {
+                  allSteps[k].classList.add(obj.hiddenClass);
+                } else if (navText == stepName) {
+                  allSteps[k].classList.remove(obj.hiddenClass);
+                  obj.activeStep = k + 1;
+                }
+              }
+
+              // console.log(stepName);
+              event.target.classList.add(obj.stepNavItemActiveClass);
+              console.log(obj.activeStep);
+
+              obj.showAllDetails(obj, form);
+            }
+          });
+        }
+      }
+    }
+  }, {
+    key: "validateActiveStep",
+    value: function validateActiveStep(obj, steps) {
+
+      //Getting the active form step node
+      var activeFormStep = steps[obj.activeStep - 1];
+      console.log(activeFormStep);
+
+      var activeFormStepFields = activeFormStep.querySelectorAll("input");
+
+      for (var l = 0; l < activeFormStepFields.length; l++) {
+        if (activeFormStepFields[l].value === '' && activeFormStepFields[l].hasAttribute('required') && (activeFormStepFields[l].type == "text" || activeFormStepFields[l].type == "email")) {
+          var errorNode = obj.getNextSibling(activeFormStepFields[l]);
+          errorNode.classList.remove(obj.formErrorHiddenClass);
+          return false;
+        }
+      }
+
+      return true;
+    }
+  }, {
+    key: "getAllDetails",
+    value: function getAllDetails(obj, form) {
+      var allFieldsWrap = form.querySelectorAll(".form-group");
+
+      console.log(allFieldsWrap);
+
+      var fields = [];
+      for (var m = 0; m < allFieldsWrap.length; m++) {
+
+        var name,
+            value,
+            fieldText,
+            fieldValue = "";
+
+        //deal with the edge case
+        if (allFieldsWrap[m].classList.contains("form-group--select") || allFieldsWrap[m].classList.contains("form__radio-group")) {
+          name = allFieldsWrap[m].querySelector("h5").textContent;
+        } else if (allFieldsWrap[m].querySelector("label")) {
+          console.log(allFieldsWrap[m].querySelector("label"));
+          name = allFieldsWrap[m].querySelector("label").textContent;
+        }
+
+        if (allFieldsWrap[m].querySelector("input")) {
+          fieldText = allFieldsWrap[m].querySelector("input").textContent;
+        }
+
+        if (allFieldsWrap[m].querySelector("input")) {
+          fieldValue = allFieldsWrap[m].querySelector("input").value;
+        }
+
+        if (allFieldsWrap[m].classList.contains("form__radio-group")) {
+          var inputs = allFieldsWrap[m].querySelectorAll("input");
+          value = "";
+          for (var o = 0; o < inputs.length; o++) {
+            if (inputs[o].checked == true) {
+              value = inputs[o].value;
+            }
+          }
+        } else if (allFieldsWrap[m].classList.contains("form-group--select")) {
+          var inputSelect = allFieldsWrap[m].querySelector("select");
+          value = inputSelect.value;
+        } else if (fieldText == "" || (typeof fieldText === "undefined" ? "undefined" : _typeof(fieldText)) == undefined) {
+          value = fieldValue;
+        } else if (fieldText != "") {
+          value = fieldText;
+        }
+
+        var field = {
+          "name": name,
+          "value": value
+        };
+
+        fields.push(field);
+      }
+      return fields;
+    }
+  }, {
+    key: "showAllDetails",
+    value: function showAllDetails(obj, form) {
+      if (obj.activeStep == 4) {
+        var formDetails = obj.getAllDetails(obj, form);
+
+        var table = form.querySelector("." + obj.confirmationTableClass);
+        // console.log(table);
+
+        table.innerHTML = "";
+        for (var n = 0; n < formDetails.length; n++) {
+
+          var tr = document.createElement('tr');
+          var td1 = formDetails[n].name;
+          var td2 = formDetails[n].value;
+          tr.innerHTML = "<td>" + td1 + "</td> <td>" + td2 + "</td>";
+          table.appendChild(tr);
+        }
+      }
+    }
+  }, {
+    key: "submitDetails",
+    value: function submitDetails(obj, form) {
+      var formDetails = obj.getAllDetails(obj, form);
+      var inputToSave = document.createElement('input');
+      inputToSave.type = "hidden";
+      inputToSave.name = "fieldSave";
+      // inputToSave.value = formDetails.join();
+      for (var i = 0; i < formDetails.length; i++) {
+        inputToSave.value += formDetails[i].name + ": " + formDetails[i].value + ", ";
+      }
+      // console.log(inputToSave);
+      form.appendChild(inputToSave);
+
+      var inputToSubmit = document.createElement('input');
+      inputToSubmit.type = "hidden";
+      inputToSubmit.name = "formFields";
+      inputToSubmit.value = JSON.stringify(formDetails);
+      // console.log(inputToSubmit);
+      form.appendChild(inputToSubmit);
+      form.submit();
+    }
+  }, {
+    key: "formSubmit",
+    value: function formSubmit(obj, form) {
+      var submitBtn = obj.getSubmitBtn(obj);
+
+      submitBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        obj.submitDetails(obj, form);
+      });
+    }
+  }, {
+    key: "getNextSibling",
+    value: function getNextSibling(Node) {
+      return Node.nextElementSibling || Node.nextSibling;
+    }
+  }, {
+    key: "getPreviousSibling",
+    value: function getPreviousSibling(Node) {
+      return Node.previousElementSibling || Node.previousSibling;
+    }
+  }, {
+    key: "getNavItems",
+    value: function getNavItems(obj) {
+      var navSteps = document.querySelectorAll("." + obj.stepsNavItemClass);
+      return navSteps;
+    }
+  }, {
+    key: "getNextStepBtns",
+    value: function getNextStepBtns(obj) {
+      var n = document.querySelectorAll("." + obj.nextStepButtonClass);
+      return n;
+    }
+  }, {
+    key: "getPreviousStepBtns",
+    value: function getPreviousStepBtns(obj) {
+      var p = document.querySelectorAll("." + obj.prevStepButtonClass);
+      return p;
+    }
+  }, {
+    key: "getLastNextStepBtn",
+    value: function getLastNextStepBtn(obj) {
+      return document.querySelector("." + obj.lastStepNextBtnClass);
+    }
+  }, {
+    key: "getSubmitBtn",
+    value: function getSubmitBtn(obj) {
+      return document.querySelector("." + obj.formSubmitButtonClass);
+    }
+  }]);
+
+  return Slidenav;
+}();
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ })
+/******/ ]);
+//# sourceMappingURL=main.bundle.js.map

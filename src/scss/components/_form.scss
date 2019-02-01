@@ -131,6 +131,28 @@
   width: auto;
 }
 
+.form__select {
+  @include margin-leader(1);
+  padding: 8px;
+  font-size: 16px;
+  font-family: $dff;
+  min-width: 150px;
+  border: 2px solid rgba(0,0,0,0.2);
+  appearance:none;
+  outline: none;
+  cursor:pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  option {
+    padding: 4px;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-top: 0;
+  }
+}
+
 .form-error {
   @include base-base(16px, $dff, 0.5, 0);
   padding-top: 0;

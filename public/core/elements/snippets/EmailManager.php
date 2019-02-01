@@ -37,6 +37,7 @@ class emailManager {
       if(!empty($this->body)) {
         $sitename = $this->modx->getOption('site_name');
         $contactPageId = $this->modx->getOption('contact_page');
+        $emailSender = $this->modx->getOption('emailsender');
         $contactPage = $this->modx->getObject('modResource', 26);
         $subject = $contactPage->getTVValue('tvFormSubject');
 
@@ -47,13 +48,15 @@ class emailManager {
         $emailTpl = $this->modx->getChunk('emailTpl', $properties);
         // Send an email:
         $sendResult = $client->sendEmail(
-          "no-reply@activeinc.com.au",
+          $emailSender,
           $sendToEmail,
           $subject,
           $emailTpl
         );
+
         return true;
-      }else {
+
+      } else {
         $this->modx->log(modX::LOG_LEVEL_ERROR, $e->message);
         return false;
       }

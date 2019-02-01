@@ -20,10 +20,10 @@
 
     <div class="forms__card col-md-10 push-md-1">
       [[!FormIt?
-      &hooks=`spam,redirect,FormItSaveForm,formHandler`
+      &hooks=`spam,redirect,FormItSaveForm`
       &redirectTo=`27`
       &validate=`yourname-trap:blank`
-      &formFields=`formFields`
+      &formFields=`fieldSave`
       ]]
 
       <form class="form form-step" action="[[~[[*id]]]]" method="post">

@@ -20,7 +20,7 @@
 
   [[+type:is=`3`:then=`
   <div class="form-group">
-    <label for="input_[[+idx]]" class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
+    <label class="form__label">[[+label]][[+required:is=`Required`:then=`*`]]</label>
     <input type="tel" value="" class="form__input" [[+required]]>
   <p class="form-error form-error__hidden">This field is required</p>
 
@@ -31,7 +31,7 @@
     [[+label:notempty=`<h5>[[+label]][[+required:is=`Required`:then=`*`]]</h5>`]]
     [[!radioInput?
         &placeholder=`[[+options]]`
-        &name=`input_[[+idx]]`
+        &name=`input_[[!+idx]]`
     ]]
   </div>
   `]]
@@ -42,6 +42,17 @@
     <input type="date" value="" class="form__input" [[+required]]>
   <p class="form-error form-error__hidden">This field is required</p>
   </div>
+  `]]
+
+  [[+type:is=`6`:then=`
+<div class="form-group form-group--select">
+[[+label:notempty=`<h5>[[+label]][[+required:is=`Required`:then=`*`]]</h5>`]]
+  <select class="form__select">
+    [[!selectInput?
+      &placeholder=`[[+options]]`
+    ]]
+  </select>
+</div>
   `]]
 
   [[+type:is=`7`:then=`

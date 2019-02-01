@@ -24,7 +24,7 @@ class formHandler {
         $value = json_decode(json_encode($value), True);
         $finalInput .= "<h4>".$value['name']."</h4>"."<p>".$value['value']."</p>";
       }
-    
+
       $this->emailSend($this->modx, $finalInput);
       unset($_POST['formFields']);
     };
@@ -40,24 +40,6 @@ class formHandler {
     require_once MODX_CORE_PATH.'/elements/snippets/EmailManager.php';
 
     $emailManager = new emailManager($modx, $inputs);
-    if($emailManager == true) {
-      return true;
-    }
-  }
-
-  private function writeToExcel($vars) {
-
-  }
-
-  private function logFormVars($var) {
-    if(!empty($var)){
-      $outputToLog = print_r($var, true);
-
-      $this->modx->log(modX::LOG_LEVEL_ERROR, $outputToLog);
-    } else {
-      return 'variable is empty or not valid';
-    }
-
   }
 
   private function form($key){
@@ -69,13 +51,4 @@ class formHandler {
 }
 
 $formHandler = new formHandler($modx);
-
-// $pageIdToRidirect = $modx->getOption('redirectTo', $scriptProperties);
-//
-// $modx->log(modX::LOG_LEVEL_ERROR, $pageIdToRidirect);
-
-// header('location', )
-
-
-//testing modx log
-// $modx->log(modX::LOG_LEVEL_ERROR, print_r($_POST, true));
+return true;
