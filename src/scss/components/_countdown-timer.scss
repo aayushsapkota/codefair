@@ -1,0 +1,23 @@
+.countdown-timer__wrap {
+  background-color: theme-color(primary);
+  @include padding-leader(3);
+  @include padding-trailer(3);
+  color: white;
+  text-align: center;
+}
+
+p.countdown-timer {
+  @include base-base(40px, $dff, 1, 0);
+  font-weight: 500;
+
+  // MEDIUM MQ
+  @include media-breakpoint-up("md") {
+    @include base-base(64px, $dff, 2, 1);
+  }
+}
+
+.counterdown-timer__btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
