@@ -1,0 +1,106 @@
+.footer {
+  box-shadow: 0 0 5px rgba(0,0,0,.7);
+  background-color: theme-color(primary);
+  color: white;
+
+
+}
+
+.footer__inner-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include padding-leader(0.5);
+  @include padding-trailer(0.5);
+
+  > * {
+    width: auto;
+  }
+
+  .rte a {
+    color: inherit;
+    border-bottom-color: theme-color(primary);
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: white;
+      opacity: 0.8;
+      border-bottom-color: white;
+    }
+  }
+}
+
+.footer__icon-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__icon-link {
+  @include base-base(16px, $dff, 1, $lines: 1.5);
+  text-decoration: none;
+  width: auto;
+  display: block;
+  color: white;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+  margin-right: 16px;
+
+  &::before {
+    font-family: "icons";
+    font-size: 24px;
+  }
+}
+
+.footer__facebook-link {
+  &::before {
+    content: "\ea91";
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $fb;
+  }
+}
+
+.footer__youtube-link {
+  &::before {
+    content: "\ea9d";
+    font-size: 34px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $youtube;
+  }
+}
+
+.footer__linkedin-link {
+  &::before {
+    content: "\eac9";
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $linkedin;
+  }
+}
+
+.footer__instagram-link {
+  &::before {
+    content: "\ea92";
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $insta;
+  }
+}

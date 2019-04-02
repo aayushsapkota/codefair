@@ -1,0 +1,26 @@
+[[$header]]
+
+<section class="event-card__outer-warp">
+  <div class="container">
+    <h2 class="event-card__grid-title">[[*tvEventsHeading]]</h2>
+    <div class="event-card__grid">
+
+      [[pdoResources?
+        &parents=`[[*id]]`
+        &tpl=`tplEventCardItem`
+        &tvPrefix=``
+        &includeTVs=`tvSummaryCardDescription,tvSummaryCardHeading,tvSummaryCardImage`
+        &processTVs=`tvSummaryCardImage`
+        &includeContent=`1`
+        &limit=`0`
+        &depth=`0`
+      ]]
+
+    </div>
+  </div>
+</section>
+
+[[*content]]
+
+
+[[$footer]]

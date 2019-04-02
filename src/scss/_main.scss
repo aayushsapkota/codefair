@@ -1,7 +1,10 @@
 @import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
 @import "../../node_modules/susy/sass/susy";
+@import "../../node_modules/base-base/base-base";
 @import "variables";
 @import "mixins/mixins";
 @import "libs/libs";
-@import "components/components";
+@import "general-styles";
 @import "typography";
+@import "layout/_layout";
+@import "components/components";

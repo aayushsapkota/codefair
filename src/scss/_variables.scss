@@ -1,32 +1,55 @@
+//enable grid or disable it
+$visual-grid :  false;
+
+//project colors
 $black: #333333;
 $blue: #211545;
 $teal: #056571;
 $blue--lighter: #295879;
-$fresh: #CCDFCB; //blue on top for accessiblity
+$fresh: #557837; //blue on top for accessiblity
 $red: #a5283B;
 $gold: #D9B310; //blue on top for accessiblity
 $grey: #2e3738;
 $pink: #723146;
 
+//map for most-commonly used colors
 $theme-colors: (
   "primary":    $blue,
   "secondary":  $red,
-  "tertiary": $blue--lighter,
+  "tertiary":   $blue--lighter,
   "success":    green,
   "info":       skyblue,
-  "warning":    yellow,
-  "danger":     #f2f2f2,
+  "warning":    #FF8C00,
+  "danger":     $red,
   "light":      white,
   "dark":       $black
 );
 
+//base line height
+$blh: 16px;
+
+
+//brand colors
+$fb: #3B5998;
+$youtube: #ff0000;
+$insta: #405de6;
+$linkedin: #0077B5;
 
 //font-families
-@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700|Roboto:400,400i,500,500i,700,700i');
-$heading-font-family: 'oxygen';
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,700|Roboto:400,400i,500,700,700i');
+$heading-font-family: 'Poppins';
 $default-font-family: 'roboto';
 $hff: $heading-font-family;
 $dff: $default-font-family;
+
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 980px,
+  xl: 1152px
+);
 
 $grid-breakpoints: (
   xs: 0,
@@ -34,15 +57,12 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px
-) !default;
+);
 
-;
-// Grid containers
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-) !default;
+//grid size span and gutter defaults
+$_susy-defaults: (
+  'columns': susy-repeat(4),
+  'gutters': 0.75,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);

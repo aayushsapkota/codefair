@@ -1,13 +1,14 @@
-.banner__outer_wrap{
+.banner__outer_wrap {
   display: flex;
   flex-wrap: wrap;
+
   > * {
     width: 100%;
   }
 }
+
 .banner {
-  background-image: url('https://images.pexels.com/photos/207962/pexels-photo-207962.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb');
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
@@ -17,9 +18,20 @@
   justify-content: center;
   position: relative;
   color: white;
+  min-height: calc(70vh - 56px);
+
+  // MEDIUM MQ
+  @include media-breakpoint-up("xl") {
+    background-position: 50% 20%;
+  }
+
+  * {
+    z-index: 3;
+  }
+
   &::before {
-    content: " ";
-    opacity: 0.4;
+    content: "";
+    opacity: 0.5;
     background-color: theme-color(primary);
     position: absolute;
     z-index: 2;
@@ -28,16 +40,26 @@
     height: 100%;
     width: 100%;
   }
-  * {
-    z-index: 3;
-  }
-  min-height: calc(100vh - 56px);
+}
+
+.banner--small {
+  min-height: calc(50vh);
+}
+
+.banner--large {
+  min-height: calc(85vh - 56px);
 }
 
 .banner__inner-wrap {
   align-items: center;
 }
 
-.banner__cta-btn{
-  max-width: 180px;
+.banner__text {
+  text-align: center;
+}
+
+.banner__cta-btn {
+  margin-right: auto;
+  margin-left: auto;
+  transition: background-color 0.25s ease-in-out;
 }

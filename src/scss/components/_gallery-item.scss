@@ -1,0 +1,42 @@
+.gallery-item__grid {
+  @include padding-leader(1);
+  // SMALL MQ
+  @include media-breakpoint-up("sm") {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      @include margin-trailer(2);
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  // MEDIUM MQ
+  @include media-breakpoint-up("md") {
+    > * {
+      @include margin-trailer(2);
+      &:nth-child(2n) {
+        margin-right: gutter(12);
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+.gallery-item__link {
+  display: block;
+  background-color: transparent;
+}
+
+.gallery-item__heading {
+  text-align: center;
+  @include padding-leader(1 + p2b(11px));
+  @include margin-trailer(0);
+}

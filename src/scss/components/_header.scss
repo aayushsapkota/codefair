@@ -1,14 +1,16 @@
-
-.header__nav-strip{
-  position: relative;
+.header__nav-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: none;
-  height: 0;
   background-color: white;
+  border-bottom:  2px solid theme-color(primary);
   // MEDIUM MQ
   @include media-breakpoint-up("md") {
     display: block;
-    height: 56px;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, .7);
+    min-height: 56px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .7);
     z-index: 2;
   }
 }
@@ -20,7 +22,10 @@
   margin: 0;
   text-decoration: none;
   overflow: hidden;
-  &:hover, &:focus,&:active{
+
+  &:active,
+  &:focus,
+  &:hover {
     text-decoration: none;
   }
 }
@@ -32,27 +37,35 @@
   object-position: center;
 }
 
-.header__cdu-logo{
+.header__cdu-logo {
   position: absolute;
   top: 0;
   left: 8px;
   height: 56px;
   padding-top: 0;
   padding-bottom: 0;
+
 }
 
-.header__codefair-logo{
+.header__codefair-logo {
   position: absolute;
   top: 0;
-  left: calc(20px + 150px);
+  left: 120px;
   height: 52px;
   padding-top: 3px;
   padding-bottom: 0;
+  // LARGE MQ
+  @include media-breakpoint-up("lg") {
+    left: 150px;
+  }
 }
 
 .header__nav {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
+  justify-content: flex-end;
+
 }
 
 .header__nav-list {
@@ -62,29 +75,57 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-left: -12px;
+  margin-left: 200px;
   margin-right: -12px;
+  // LARGE MQ
+  @include media-breakpoint-up("lg") {
+    margin-left: 0;
+  }
 }
 
-.header__nav-link{
+.header__nav-link {
   display: block;
   width: auto;
   color: inherit;
   text-align: center;
   font-weight: 500;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  @include base-base(14px, $dff, 1, 0, $lines: 1.5);
+  padding: 16px 12px;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.25s linear;
   color: theme-color(primary);
   font-family: $dff;
-  &:hover,
+
+  &:active,
   &:focus,
-  &:active{
+  &:hover {
     color: white;
     text-decoration: none;
     background-color: theme-color(primary);
+  }
+}
+
+a.header__nav-link.active {
+  background-color: theme-color(primary);
+  color: white;
+}
+
+.header__nav-cta {
+  margin-left: 24px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  align-self: flex-start;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: white;
+    background-color: mix(white, theme-color(secondary), 10%);
+  }
+
+  &:active {
+    background-color: mix(white, theme-color(secondary), 20%);
   }
 }

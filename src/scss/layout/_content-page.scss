@@ -1,0 +1,7 @@
+.content-page {
+  // MEDIUM MQ
+  @include media-breakpoint-up("md") {
+    @include span(10 of 12);
+    margin-left: span(1 wide of 12);;
+  }
+}

@@ -1,0 +1,189 @@
+.form {
+  @include padding-trailer(1);
+
+  .btn {
+    @include margin-leader(2);
+    width: auto;
+    max-width: 200px;
+  }
+}
+
+.form__title {
+  @include base-base(28px, $hff, 1, 0);
+}
+
+.form__outer_wrap {
+  @extend .wrap;
+}
+
+.form--inline {
+  display: inline-block;
+}
+
+.btn +.form--card {
+  margin-left: 12px;
+}
+
+.form-group {
+  @include padding-trailer(1);
+}
+
+.form__label {
+  display: block;
+  font-weight: 500;
+  @include base-base(16px, $hff, 0);
+  color: theme-color(tertiary);
+}
+
+.form__label-inline {
+  display: inline-block;
+  font-weight: 500;
+  @include base-base(16px, $hff, 0);
+  color: theme-color(tertiary);
+}
+
+.form-control {
+  @include padding-trailer(0.5);
+}
+
+.form__input {
+  color: theme-color(dark);
+  display: block;
+  @include base-base(14px, $hff, 1);
+  width: 100%;
+  max-width: 800px;
+  border: 0;
+  padding-left: 3px;
+  border-bottom: 3px solid theme-color(dark);
+  transition: border-bottom-color 0.2s ease-in;
+
+  &:focus {
+    outline: none;
+    border: 0;
+
+    &:invalid {
+      box-shadow: none;
+      border-bottom: 3px solid theme-color(danger);
+    }
+  }
+
+  &:valid {
+    border-bottom: 3px solid theme-color(success);
+
+    &~ .form-error {
+      display: none;
+    }
+  }
+}
+
+.form__radio-group {
+  label {
+    padding-left: 24px;
+    position: relative;
+
+    input[type=radio] {
+      position: absolute;
+      top: 21px;
+      left: 0;
+      width: 16px;
+      font-size: 16px;
+    }
+  }
+}
+
+.form__input--inline {
+  display: inline-block;
+  width: auto;
+}
+
+.form__input-file {
+  color: theme-color(dark);
+  display: block;
+  @include base-base(14px, $hff, 1);
+  width: 100%;
+  max-width: 800px;
+  border: 0;
+}
+
+.form__input-date {
+  color: theme-color(dark);
+  display: inline-block;
+  width: auto;
+  @include base-base(14px, $hff, 0);
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: 800px;
+  border: 0;
+}
+
+.form__radio-input {
+  display: inline-block;
+  width: auto;
+  @include base-base(14px, $hff, 0);
+}
+
+.form__radio-label {
+  @extend .form__label;
+  padding-left: 12px;
+  @include base-base(14px, $hff, 0);
+  color: theme-color(dark);
+  display: inline-block;
+  width: auto;
+}
+
+.form__select {
+  @include margin-leader(1);
+  padding: 8px;
+  font-size: 16px;
+  font-family: $dff;
+  min-width: 150px;
+  border: 2px solid rgba(0,0,0,0.2);
+  appearance:none;
+  outline: none;
+  cursor:pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  option {
+    padding: 4px;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-top: 0;
+  }
+}
+
+.form-error {
+  @include base-base(16px, $dff, 0.5, 0);
+  padding-top: 0;
+  color: theme-color(warning);
+}
+
+.form-error__hidden {
+  display: none;
+}
+
+.form__flash {
+  font-size: 18px;
+  font-family: $dff;
+  color: white;
+  margin-bottom: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  @include pad();
+  @include media-breakpoint-up("lg") {
+    @include get-container-max-width("lg");
+  }
+  @include media-breakpoint-up("xl") {
+    @include get-container-max-width("xl");
+  }
+}
+
+.form__error-wrap {
+  background-color: theme-color(danger);
+  border-bottom: 2px solid white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

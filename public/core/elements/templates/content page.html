@@ -1,0 +1,39 @@
+[[$head]]
+
+<div class="banner__outer_wrap">
+  <section class="banner banner--small" style="background-image:url('[[*tvBannerBgImage:default=`[[#1.tvBannerBgImage]]`:phpthumbof=`w=1920&q=70`]]')">
+    <div class="container banner__inner-wrap">
+      <div class="banner__text">
+        <h1 class="combined-heading">
+          <strong class="combined__heading-title">[[*tvBannerHeading:default=`[[*longtitle]]`]]</strong>
+          [[*tvBannerSubHeading:notempty=`<span class="combined-heading__tagline">[[*tvBannerSubHeading]]</span>
+        </h1>`]]
+      </div>
+    </div>
+  </section>
+</div>
+
+[[*content]]
+
+
+[[*parent:is=`0`:then=``:else=`<section class="summary-card__outer-warp">
+  <div class="container">
+    [[#[[*parent]].tvEventsHeading:notempty=`<h2 class="summary-card__grid-title">[[#[[*parent]].tvEventsHeading]]</h2>`]]
+    <div class="summary-card__grid">
+      [[pdoResources?
+          &parents=`[[*parent]]`
+          &tpl=`[[*parent:is=`2`:then=`tplEventCardItem`:else=`tplSummaryCard`]]`
+          &tvPrefix=``
+          &includeTVs=`tvSummaryCardDescription,tvSummaryCardHeading,tvSummaryCardImage,tvBannerBgImage`
+          &processTVs=`tvSummaryCardImage,tvBannerBgImage`
+          &includeContent=`0`
+          &limit=`0`
+          &depth=`0`
+          &sortby=`{"menuindex":"ASC"}`
+      ]]
+
+    </div>
+  </div>
+</section>`]]
+
+[[$footer]]

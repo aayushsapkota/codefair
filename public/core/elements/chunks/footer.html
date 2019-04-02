@@ -1,0 +1,112 @@
+<section class="sponsors">
+  <div class="container">
+    [[#1.tvFooterSponsorsHeading:notempty=`<h2 class="sponsors__title">[[#1.tvFooterSponsorsHeading]]</h2>`]]
+
+
+
+      [[getImageList?
+          &tvname=`tvFooterSponsorsMainGrid`
+          &tpl=`tplSponsorsGridItem`
+          &limit=`0`
+          &docid=`1`
+          &toPlaceholder=`mainSponsors`
+      ]]
+      [[- SPONSORS MAIN GRID]]
+      [[+mainSponsors:notempty=`<div class="sponsors__grid sponsors__grid--large sponsors__grid--centered">
+        [[+mainSponsors]]
+      </div>`]]
+
+
+      [[getImageList?
+          &tvname=`tvFooterSponsorsGrid`
+          &tpl=`tplSponsorsGridItem`
+          &limit=`0`
+          &docid=`1`
+          &toPlaceholder=`otherSponsors`
+      ]]
+
+      [[- SPONSORS GRID]]
+
+        [[+otherSponsors:notempty=`<div class="sponsors__grid">
+        [[+otherSponsors]]
+      </div>`]]
+
+
+
+      [[getImageList?
+          &tvname=`tvFooterSponsorsOrganizationGrid`
+          &tpl=`tplSponsorsGridItem`
+          &limit=`0`
+          &docid=`1`
+          &toPlaceholder=`organizationSponsors`
+      ]]
+
+      [[- SPONSORS GRID Organization]]
+      [[+organizationSponsors:notempty=`<div class="sponsors__grid sponsors__grid--centered sponsors__grid--medium">
+        [[+organizationSponsors]]
+      </div>`]]
+
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="container ">
+    <div class="footer__inner-wrap">
+      <div class="rte">
+        <p>&copy; [[++footer_copyright_text]][[++privacy_policy_link:notempty=`,<a href="[[++privacy_policy_link:urlClean]]"> Privacy Policy</a>`]][[++terms_and_conditions_link:notempty=`,<a href="[[++terms_and_conditions_link:urlClean]]"> Terms and Conditions</a>`]]</p>
+      </div>
+      <div class="footer__icon-list">
+        [[++facebook_page_link:notempty=`<a href="[[++facebook_page_link:urlClean]]" class="footer__facebook-link footer__icon-link">
+        </a>`]]
+        [[++youtube_link:notempty=`<a href="[[++youtube_link:urlClean]]" class="footer__youtube-link footer__icon-link">
+        </a>`]]
+        [[++linkedin_profile_link:notempty=`<a href="[[++linkedin_profile_link:urlClean]]" class="footer__linkedin-link footer__icon-link">
+        </a>`]]
+        [[++instagram_profile_link:notempty=`<a href="[[++instagram_profile_link:urlClean]]" class="footer__instagram-link footer__icon-link">
+        </a>`]]
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="slide-nav">
+  <button type="close" name="close" title="Close Nav" class="slide-nav__close">Close Navigation</button>
+  <h2>[[++site_name]]</h2>
+  <ul class="slide-nav__list">
+    [[pdoMenu?
+        &parents=`0`
+        &level=`0`
+        &tplInner=`@INLINE [[+wrapper]]`
+        &tplParentRow=`@INLINE <li[[+classes]]><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+        &tplOuter=`@INLINE [[+wrapper]]`
+        &tplInner=`@INLINE <ul class="slide-nav__inner-list">[[+wrapper]]</ul>`
+        &tplInnerRow=`@INLINE <li[[+classes]]>
+        <a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a></li>`
+        &firstClass=``
+        &lastClass=``
+        &rowClass=`slide-nav__list-item`
+        &hereClass=`active`
+    ]]
+  </ul>
+</div>
+
+<div class="overlay-nav">
+  <button type="button" name="overlay-nav__button" class="overlay-nav__button">Menu</button>
+  [[!pdoCrumbs? &showHome=`1` &showAtHome=`0`]]
+  <div class="overlay-nav__icon-list">
+    [[++facebook_page_link:notempty=`<a href="[[++facebook_page_link:urlClean]]" class="footer__facebook-link footer__icon-link">
+    </a>`]]
+    [[++youtube_link:notempty=`<a href="[[++youtube_link:urlClean]]" class="footer__youtube-link footer__icon-link">
+    </a>`]]
+    [[++linkedin_profile_link:notempty=`<a href="[[++linkedin_profile_link:urlClean]]" class="footer__linkedin-link footer__icon-link">
+    </a>`]]
+    [[++instagram_profile_link:notempty=`<a href="[[++instagram_profile_link:urlClean]]" class="footer__instagram-link footer__icon-link">
+    </a>`]]
+  </div>
+</div>
+
+<div class="slide-nav__overlay"></div>
+
+
+</body>
+</html>

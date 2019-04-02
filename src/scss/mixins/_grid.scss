@@ -2,13 +2,22 @@
   $max: map-get($breakpoints, $name);
   @return if($max != 0, $max, null);
 }
-
-@mixin get-container-max-width($name, $max-widths: $container-max-widths){
+@mixin get-container-max-width($name, $max-widths: $container-max-widths) {
   $max: container-max($name, $max-widths);
   @if $max {
     width: $max;
   } @else {
     width: auto;
+  }
+}
+
+.wrap {
+  @include padding-trailer(2);
+  @include padding-trailer(2);
+  // SMALL MQ
+  @include media-breakpoint-up("sm") {
+    @include padding-leader(4);
+    @include padding-trailer(3);
   }
 }
 
@@ -20,7 +29,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  > *{
+
+  > * {
     width: 100%;
   }
 
@@ -28,13 +38,10 @@
     padding-left: 24px;
     padding-right: 24px;
   }
-
   @include media-breakpoint-up("lg") {
     @include get-container-max-width("lg");
   }
-
   @include media-breakpoint-up("xl") {
     @include get-container-max-width("xl");
   }
-
 }

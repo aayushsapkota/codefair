@@ -1,0 +1,154 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+h1 {
+  @include base-base(38px, $hff, 2,  $lines: 3);
+  letter-spacing: -0.6px;
+}
+
+h2 {
+  @include base-base(34px, $hff, 2, $lines: 2.5);
+  letter-spacing: -0.4px;
+}
+
+h3 {
+  @include base-base(24px, $hff, 2);
+  letter-spacing: -0.3px;
+}
+
+h4 {
+  @include base-base(22px, $hff, 2);
+}
+
+h5 {
+  @include base-base(18px, $hff, 0.5, $lines: 1.5);
+}
+
+p {
+  @include base-base(18px, $dff, 2, $lines: 2);
+}
+
+
+// SMALL MQ
+@include media-breakpoint-up('sm') {
+  h1 {
+    @include base-base(46px, $hff, 2, $lines: 3.5);
+  }
+
+  h2 {
+    @include base-base(36px, $hff, 2, $lines: 3);
+  }
+
+  h3 {
+    @include base-base(28px, $hff, 2, $lines: 2.5);
+  }
+
+  h4 {
+    @include base-base(24px, $hff, 1.5, $lines: 2);
+  }
+}
+
+// MEDIUM MQ
+@include media-breakpoint-up('md') {
+  h1 {
+    @include base-base(56px, $hff, 2, $lines: 3.5);
+  }
+
+  h2 {
+    @include base-base(40px, $hff, 2, $lines: 3);
+  }
+
+  h3 {
+    @include base-base(32px, $hff, 2, $lines: 2.5);
+  }
+
+}
+
+.rte{
+  p {
+    @include base-base(18px, $dff, 2, $lines: 2);
+  }
+
+  a {
+    color: theme-color(secondary);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px solid theme-color white;
+    transition: border-bottom-color 0.25s ease-in-out;
+    &:hover, &:focus, &:active{
+      text-decoration: none;
+      color: theme-color(secondary);
+      border-bottom: 2px solid theme-color(secondary);
+    }
+  }
+
+  ul,
+  ol {
+    @include margin-trailer(1.5);
+    padding-left: 0;
+
+    li {
+      @include base-base(18px, $hff, 1, $lines: 2);
+      ul,
+      ol {
+        padding-top: 0;
+        padding-left: 24px;
+        @include margin-trailer(0.5);
+
+      }
+    }
+  }
+  ul {
+    list-style-type: none;
+
+    li {
+      &::before {
+        content: ">";
+        padding-right: 12px;
+      }
+    }
+  }
+  ol {
+    padding-left: 20px;
+    li {
+      padding-left: 0px;
+      list-style-type: decimal;
+      &::before {
+        padding-right: 12px;
+
+      }
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  iframe {
+    @include margin-leader(2);
+    width: 100%;
+    @include object-fit(contain, center);
+  }
+}
+
+.video-embed {
+  position: relative;
+  height: 0;
+  padding-top: 9/16 * 100%;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}

@@ -1,0 +1,52 @@
+[[$header]]
+
+<section class="event-card__outer-warp">
+  <div class="container">
+    [[*tvFeaturedCardGrid:is=`1`:then=`<div class="event-card__featured-grid omega-child-sm-2n">
+
+
+      [[$eventCardItem?
+          &classNames=`event-card col-sm-8`
+          &image=``
+          &imageAlt=``
+          &heading=`[[*tvFeaturedCardHeading]]`
+          &subHeading=`[[*tvFeaturedCardSubHeading]]`
+          &description=`[[*tvFeaturedCardDescription]]`
+          &btnTarget=`[[*tvFeaturedCardBtnTarget]]`
+          &btnLabel=`[[*tvFeaturedCardBtnLabel]]`
+      ]]
+
+      [[$eventCardItem?
+          &classNames=`event-card col-sm-4`
+          &image=``
+          &imageAlt=``
+          &heading=`[[*tvSideBarCardHeading]]`
+          &subHeading=``
+          &description=`[[*tvSideBarCardDescription]]`
+          &btnTarget=``
+          &btnLabel=``
+      ]]
+
+
+    </div>`]]
+
+    <h2 class="event-card__grid-title">[[*tvFeaturedPagesHeading]]</h2>
+    <div class="event-card__grid">
+
+      [[pdoResources?
+          &parents=`0`
+          &resources=`[[*tvFeaturedPages]]`
+          &tpl=`tplEventCardItem`
+          &tvPrefix=``
+          &includeTVs=`tvSummaryCardDescription,tvSummaryCardHeading,tvSummaryCardImage`
+          &processTVs=`tvSummaryCardImage`
+          &includeContent=`0`
+          &limit=`0`
+          &depth=`0`
+      ]]
+
+    </div>
+  </div>
+</section>
+
+[[$footer]]

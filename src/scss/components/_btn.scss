@@ -1,13 +1,12 @@
 .btn {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   text-align: center;
-  background-color: $red;
+  background-color: theme-color(secondary);
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 3px;
-  min-width: 100px;
+  padding: 10px 15px;
+  border-radius: 2px;
+  min-width: 120px;
   width: auto;
   width: fit-content;
   margin-top: 15px;
@@ -16,12 +15,32 @@
   font-weight: 500;
   font-family: $dff;
   letter-spacing: 0.7px;
+  position: relative;
+  transition: all 0.2s ease-in;
+  border: 0;
 
   &:active,
   &:focus,
   &:hover {
     text-decoration: none;
     color: white;
-    background-color: theme-color(primary);
+    background-color: mix(white, theme-color(secondary), 10%);
+  }
+
+  &:active {
+    background-color: mix(white, theme-color(secondary), 20%);
+  }
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  &:active,
+  &:focus,
+  &:hover {
+    color: white;
+    opacity: 0.6;
+    background-color: transparent;
   }
 }
