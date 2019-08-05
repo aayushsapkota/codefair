@@ -5,7 +5,8 @@
   width: 100%;
   display: none;
   background-color: white;
-  border-bottom:  2px solid theme-color(primary);
+  border-bottom: 2px solid theme-color(primary);
+
   // MEDIUM MQ
   @include media-breakpoint-up("md") {
     display: block;
@@ -54,6 +55,7 @@
   height: 52px;
   padding-top: 3px;
   padding-bottom: 0;
+
   // LARGE MQ
   @include media-breakpoint-up("lg") {
     left: 150px;
@@ -77,6 +79,7 @@
   padding: 0;
   margin-left: 200px;
   margin-right: -12px;
+
   // LARGE MQ
   @include media-breakpoint-up("lg") {
     margin-left: 0;
@@ -112,20 +115,92 @@ a.header__nav-link.active {
   color: white;
 }
 
+.header__nav-cta-wrap {
+  position: relative;
+}
+
 .header__nav-cta {
   margin-left: 24px;
+  padding-right: 36px;
   margin-top: 6px;
   margin-bottom: 6px;
   align-self: flex-start;
+  position: relative;
+
+  &::before {
+    content: ">";
+    font-size: 18px;
+    font-family: $dff;
+    right: 12px;
+    top: 8px;
+    transform: rotate(90deg);
+    position: absolute;
+    transition: transform 0.25s linear;
+  }
 
   &:active,
   &:focus,
   &:hover {
+    outline: none;
     color: white;
     background-color: mix(white, theme-color(secondary), 10%);
   }
 
   &:active {
     background-color: mix(white, theme-color(secondary), 20%);
+  }
+}
+
+.header__nav-cta-dropdown {
+  position: absolute;
+  display: none;
+  top: 50px;
+  background-color: white;
+  z-index: 9;
+  left: 24px;
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+
+  li {
+    padding: 0;
+    margin: 0;
+
+    &:last-child {
+      a {
+        border-radius: 0 0 3px 3px;
+      }
+    }
+  }
+
+  a {
+    @include base-base(16px, $dff, 0);
+    display: block;
+    margin-bottom: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 11px;
+    color: theme-color(primary);
+    transition: background-color 0.25s linear;
+
+    &:hover,
+    &:focus {
+      background-color: mix(theme-color(primary), white, 20%);
+      outline: none;
+      text-decoration: none;
+    }
+  }
+}
+
+.header__nav-cta-wrap--open {
+  .header__nav-cta {
+    &::before {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .header__nav-cta-dropdown {
+    display: block;
   }
 }

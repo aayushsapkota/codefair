@@ -33,7 +33,18 @@
                 &sortby=`{"menuindex":"ASC"}`
             ]]
 
-            [[++contact_page:notempty=`<a href="[[++contact_page:urlClean]]" class="header__nav-cta btn">Register</a>`]]
+            <div class="header__nav-cta-wrap">
+            <button class="header__nav-cta btn">Register</button>
+
+              <ul class="header__nav-cta-dropdown">
+                  [[++individual_contact_page:notempty=`<li>
+                    <a href="[[++individual_contact_page:urlClean]]">Individual</a>
+                </li>`]]
+                [[++group_contact_page:notempty=`<li>
+                    <a href="[[++group_contact_page:urlClean]]" >Group</a>
+                </li>`]]
+                </ul>
+              </div>
 
 
           </nav>
