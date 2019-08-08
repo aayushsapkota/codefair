@@ -65,7 +65,6 @@
       box-shadow: none;
       border-bottom: 3px solid theme-color(danger);
     }
-  }
 
   &:valid {
     border-bottom: 3px solid theme-color(success);
@@ -74,6 +73,7 @@
       display: none;
     }
   }
+}
 }
 
 .form__radio-group {
@@ -138,7 +138,7 @@
   padding: 8px;
   font-size: 16px;
   font-family: $dff;
-  min-width: 150px;
+  min-width: 250px;
   border: 2px solid rgba(0,0,0,0.2);
   appearance:none;
   outline: none;
@@ -152,6 +152,17 @@
     padding: 4px;
     border: 2px solid rgba(0,0,0,0.2);
     border-top: 0;
+  }
+}
+
+.form__textbox-input{
+  min-width: 250px;
+  min-height: 200px;
+  @include base-base(18px, $hff, 1);
+  @include margin-leader(1);
+
+  @include media-breakpoint-up("lg") {
+    min-width: 350px;
   }
 }
 

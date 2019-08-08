@@ -12,3 +12,6 @@ public/*
 !/public/core/elements/*
 
 !/public/.htaccess
+public.zip
+public/build/main.bundle.css.map
+public/build/main.bundle.js.map
