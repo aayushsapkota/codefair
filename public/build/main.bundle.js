@@ -93,14 +93,14 @@ var _slideNav = __webpack_require__(7);
 
 var _slideNav2 = _interopRequireDefault(_slideNav);
 
-var _navMenu = __webpack_require__(13);
+var _navMenu = __webpack_require__(8);
 
 var _navMenu2 = _interopRequireDefault(_navMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //style imports for build system
-__webpack_require__(8);
+__webpack_require__(9);
 
 //libs import
 
@@ -520,16 +520,6 @@ module.exports = function () {
 
 /***/ }),
 /* 8 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -583,6 +573,12 @@ module.exports = function () {
 
     return NavMenu;
 }();
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

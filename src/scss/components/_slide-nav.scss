@@ -1,14 +1,17 @@
 .slide-nav {
   position: fixed;
+  overflow-y: scroll;
   top: 0;
   left: -280px;
   background-color: white;
   min-height: 100vh;
+  max-height: 100vh;
   width: 280px;
   @include padding-leader(2);
   border-right: 2px solid theme-color(primary);
   z-index: 4;
   transition: left 0.3s linear;
+  
 
   * {
     position: relative;
