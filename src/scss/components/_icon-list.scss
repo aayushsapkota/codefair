@@ -1,0 +1,71 @@
+.icon-list {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+}
+
+.icon-list__item {
+  @include base-base(16px, $dff, 1, 0);
+  font-family: $dff !important;
+  padding-left: 32px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    font-family: 'icons';
+    top: 12px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: theme-color(secondary);
+  }
+
+}
+
+.icon-list__item--{
+  &badge {
+    &::before {
+      content: $icon-badge;
+    }
+  }
+
+  &calendar {
+    &::before {
+      content: $icon-calendar;
+    }
+  }
+
+  &clipboard {
+    &::before {
+      content: $icon-clipboard;
+    }
+  }
+  &checkmark {
+    &::before {
+      content: $icon-checkmark;
+    }
+  }
+  &code {
+    &::before {
+      content: $icon-code;
+    }
+  }
+  &clock {
+    &::before {
+      content: $icon-clock;
+    }
+  }
+  &trophy {
+    &::before {
+      content: $icon-trophy;
+    }
+  }
+  &binoculars{
+    &::before {
+      content: $icon-binoculars;
+    }
+  }
+}

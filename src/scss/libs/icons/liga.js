@@ -61,6 +61,10 @@
             'list3': '&#xe9bd;',
             'share2': '&#xea82;',
             'social': '&#xea82;',
+            'display': '&#xe956;',
+            'screen': '&#xe956;',
+            'clipboard': '&#xe9b8;',
+            'board': '&#xe9b8;',
           '0': 0
         };
         delete icons['0'];

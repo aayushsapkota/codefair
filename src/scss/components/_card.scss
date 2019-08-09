@@ -1,0 +1,8 @@
+.card {
+  padding-left: 24px;
+  padding-right: 24px;
+  @include padding-leader(2);
+  @include padding-trailer(2);
+  @include margin-trailer(2);
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

@@ -36,11 +36,26 @@
   background-color: transparent;
   border: 2px solid white;
   color: white;
+  letter-spacing: 0px;
+  max-width: none;
   &:active,
   &:focus,
   &:hover {
     color: white;
     opacity: 0.6;
     background-color: transparent;
+  }
+}
+
+.btn--outline-dark {
+  @extend .btn--outline;
+  border: 2px solid theme-color(primary);
+  color: theme-color(primary);
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: theme-color(primary);
+    opacity: 0.6;
   }
 }

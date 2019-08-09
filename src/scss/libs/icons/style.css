@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('fonts/icons.ttf?9heb86') format('truetype'),
-    url('fonts/icons.woff?9heb86') format('woff'),
-    url('fonts/icons.svg?9heb86#icons') format('svg');
+    url('fonts/icons.ttf?xoswm6') format('truetype'),
+    url('fonts/icons.woff?xoswm6') format('woff'),
+    url('fonts/icons.svg?xoswm6#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -33,6 +33,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-auction:before {
+  content: "\e908";
+}
+.icon-judge:before {
+  content: "\e908";
+}
+.icon-rule:before {
+  content: "\e908";
+}
+.icon-hammer:before {
+  content: "\e908";
+}
+.icon-court:before {
+  content: "\e908";
+}
 .icon-linear_scale:before {
   content: "\e902";
 }
@@ -50,6 +65,9 @@
 }
 .icon-checkmark:before {
   content: "\e90b";
+}
+.icon-badge:before {
+  content: "\e90e";
 }
 .icon-download:before {
   content: "\e960";
@@ -105,20 +123,11 @@
 .icon-share2:before {
   content: "\ea82";
 }
-.icon-auction:before {
-  content: "\e908";
+.icon-display:before {
+  content: "\e956";
 }
-.icon-judge:before {
-  content: "\e908";
-}
-.icon-rule:before {
-  content: "\e908";
-}
-.icon-hammer:before {
-  content: "\e908";
-}
-.icon-court:before {
-  content: "\e908";
+.icon-clipboard:before {
+  content: "\e9b8";
 }
 .icon-handshake-o:before {
   content: "\e909";

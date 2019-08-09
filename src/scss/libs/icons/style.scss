@@ -3,9 +3,9 @@
 @font-face {
   font-family: '#{$icomoon-font-family}';
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9heb86') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9heb86') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9heb86##{$icomoon-font-family}') format('svg');
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?xoswm6') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?xoswm6') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?xoswm6##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,6 +35,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-auction {
+  &:before {
+    content: $icon-auction; 
+  }
+}
+.icon-judge {
+  &:before {
+    content: $icon-judge; 
+  }
+}
+.icon-rule {
+  &:before {
+    content: $icon-rule; 
+  }
+}
+.icon-hammer {
+  &:before {
+    content: $icon-hammer; 
+  }
+}
+.icon-court {
+  &:before {
+    content: $icon-court; 
+  }
+}
 .icon-linear_scale {
   &:before {
     content: $icon-linear_scale; 
@@ -63,6 +88,11 @@
 .icon-checkmark {
   &:before {
     content: $icon-checkmark; 
+  }
+}
+.icon-badge {
+  &:before {
+    content: $icon-badge; 
   }
 }
 .icon-download {
@@ -155,29 +185,14 @@
     content: $icon-share2; 
   }
 }
-.icon-auction {
+.icon-display {
   &:before {
-    content: $icon-auction; 
+    content: $icon-display; 
   }
 }
-.icon-judge {
+.icon-clipboard {
   &:before {
-    content: $icon-judge; 
-  }
-}
-.icon-rule {
-  &:before {
-    content: $icon-rule; 
-  }
-}
-.icon-hammer {
-  &:before {
-    content: $icon-hammer; 
-  }
-}
-.icon-court {
-  &:before {
-    content: $icon-court; 
+    content: $icon-clipboard; 
   }
 }
 .icon-handshake-o {
